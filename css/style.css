@@ -16,6 +16,10 @@ body {
   width: 100%;
   margin: 0px; }
 
+/*CONFIG GRALES*/
+main {
+  margin: 4rem; }
+
 .titulo {
   font-family: "Roboto";
   color: #BF047E;
@@ -30,11 +34,10 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
+  height: 20rem;
   width: 98%;
   margin-bottom: 2rem; }
   .barraNav .barraNav__logo {
-    width: 12rem;
-    height: 17rem;
     align-self: center;
     justify-self: center; }
     .barraNav .barraNav__logo .barraNav__logo-imagen {
@@ -63,35 +66,121 @@ body {
       background-color: #BF047E;
       letter-spacing: 1.3rem; }
 
-/*INDEX*/
-.swiper-container {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  background-color: #D7D7D9;
-  width: 90rem;
-  height: 90rem; }
-  .swiper-container .swiper-wrapper {
-    padding: 2rem;
-    margin: 0px; }
-    .swiper-container .swiper-wrapper .swiper-slide {
-      width: 80rem; }
-      .swiper-container .swiper-wrapper .swiper-slide .slider-image {
-        border-radius: 80%;
-        max-width: 100%;
-        max-height: 100%; }
-  .swiper-container .swiper-button-prev {
+/*FOOTER*/
+.footerContainer {
+  margin-bottom: 2rem; }
+  .footerContainer__nav {
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around; }
+    .footerContainer__nav .footerContainer__nav-imagen {
+      margin: 1rem;
+      align-self: center;
+      justify-self: center;
+      width: 4rem;
+      height: 4rem;
+      transition: 2s; }
+    .footerContainer__nav .footerContainer__nav-imagen:hover {
+      transform: scale(1.2, 1.2); }
+  .footerContainer__linkArriba {
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
     color: #A6036D;
-    opacity: 0.3; }
-  .swiper-container .swiper-button-prev:hover {
-    color: #A6036D;
-    opacity: 0.7; }
-  .swiper-container .swiper-button-next {
-    color: #A6036D;
-    opacity: 0.3; }
-  .swiper-container .swiper-button-next:hover {
-    color: #A6036D;
-    opacity: 0.7; }
+    transition: 2s; }
+  .footerContainer__linkArriba:hover {
+    transform: scale all;
+    font-size: 2.2rem; }
 
+/*INDEX*/
+.mainContainer {
+  padding: 3rem;
+  width: 95%;
+  height: 80rem;
+  background: white; }
+
+.mainContainer__slider {
+  width: 100%;
+  height: 80rem; }
+
+.swiper-wrapper {
+  text-align: center;
+  padding: 2rem;
+  margin: 0px; }
+  .swiper-wrapper .slider-image {
+    border-radius: 80%;
+    max-width: 100%;
+    max-height: 100%; }
+
+/*
+  .swiper-container {
+    margin: 0px;
+    padding: 0px;
+    height: 75rem;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    object-fit: cover;
+    width: 70rem;
+    height: 70rem;
+  }*/
+mainContainer__boton .swiper-button-prev {
+  color: #A6036D;
+  opacity: 0.3; }
+
+mainContainer__boton .swiper-button-prev:hover {
+  color: #A6036D;
+  opacity: 0.7; }
+
+mainContainer__boton .swiper-button-next {
+  color: #A6036D;
+  opacity: 0.3; }
+
+mainContainer__boton .swiper-button-next:hover {
+  color: #A6036D;
+  opacity: 0.7; }
+
+/*
+    .mainContainer__slider{
+        width: 100%;
+        height: 80rem;
+    }
+
+    .swiper-wrapper{
+        text-align: center;
+        padding: 2rem;
+        margin: 0px;
+
+        .slider-image{
+            border-radius: 80%;
+            max-width: 100%;
+            max-height: 100%;
+              }
+    }
+
+
+
+    .swiper-button-prev{    
+        color: $bordo;
+        opacity: 0.3;
+    }
+        .swiper-button-prev:hover{
+            color: $bordo;
+            opacity: 0.7;
+          }
+    .swiper-button-next{    
+            color: $bordo;
+            opacity: 0.3;
+        }
+        .swiper-button-next:hover{
+            color: $bordo;
+            opacity: 0.7;
+          }
+}*/
 /*TRABAJOS*/
 #tabla {
   color: #A6036D;
@@ -115,56 +204,26 @@ body {
 /*GALERIA*/
 .cakeTopper {
   background-color: #D99AC3;
-  height: 40rem;
+  height: auto;
   width: 100%;
-  padding: 2rem;
   margin-top: 5rem; }
-  .cakeTopper .cakeTopper__titulo {
+  .cakeTopper__titulo {
     color: #A6036D;
     text-align: center;
     height: 3rem;
     width: 100%;
     font-size: 3rem;
-    margin-bottom: 4rem; }
-  .cakeTopper .cakeTopper__imgContainer {
-    max-width: 80rem;
+    margin-bottom: 2rem; }
+  .cakeTopper__imgContainer {
+    padding: 2rem;
+    max-width: 98%;
     text-align: center; }
-    .cakeTopper .cakeTopper__imgContainer .cakeTopper__img--Circulo {
+    .cakeTopper__imgContainer .cakeTopper__img--Circulo {
       border-radius: #D99AC3 2px;
       align-self: center;
       justify-self: center;
       height: 80%;
       border-radius: 20%; }
-
-.footerContainer {
-  margin-bottom: 2rem; }
-  .footerContainer .footerContainer__nav {
-    height: 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: space-around; }
-    .footerContainer .footerContainer__nav .footerContainer__nav-imagen {
-      margin: 1rem;
-      align-self: center;
-      justify-self: center;
-      width: 4rem;
-      height: 4rem;
-      transition: 2s; }
-    .footerContainer .footerContainer__nav .footerContainer__nav-imagen:hover {
-      transform: scale(all);
-      width: 6rem;
-      height: 6rem; }
-  .footerContainer .footerContainer__linkArriba {
-    font-size: 2rem;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: #A6036D;
-    transition: 2s; }
-  .footerContainer .footerContainer__linkArriba:hover {
-    transform: scale;
-    font-size: 2.2rem; }
 
 /* Sobre Ella CSS  */
 .infoElla {
@@ -173,49 +232,40 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-evenly; }
-
-.infoElla img {
-  align-self: flex-start;
-  max-height: 20rem;
-  transition: all 2s; }
-
-.infoElla img:hover {
-  max-height: 40rem; }
-
-.textoInformativo {
-  color: #A6036D; }
+  .infoElla__img {
+    align-self: flex-start;
+    max-height: 20rem;
+    transition: all 2s; }
+  .infoElla__img:hover {
+    max-height: 40rem; }
+  .infoElla .textoInformativo {
+    color: #A6036D; }
 
 /* Contacto CSS  */
 .contactoPadre {
-  margin: 20px auto 20px auto;
-  padding: 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  overflow: auto;
-  font-size: 2rem; }
+  font-size: 2.5rem; }
   .contactoPadre__contactoHijo {
-    margin: 5px;
+    margin: 0.5rem;
     color: #A6036D;
     flex-grow: 1; }
     .contactoPadre__contactoHijo .consulta_texto {
       font-size: 2.2rem; }
     .contactoPadre__contactoHijo option {
+      font-size: 2rem;
       font-weight: normal;
       display: block;
       color: #A6036D;
-      white-space: pre;
-      min-height: 1.2em;
+      white-space: pre-line;
       padding: 0.5rem; }
-    .contactoPadre__contactoHijo .consulta_clases_presupuesto {
+    .contactoPadre__contactoHijo__contactoHijo-consulta_clases_presupuesto {
       display: flex;
-      flex-direction: row;
-      justify-content: space-evenly; }
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; }
     .contactoPadre__contactoHijo.ingresoTexto {
       flex-grow: 2;
       font-size: 2rem;
@@ -228,6 +278,8 @@ body {
     .contactoPadre__contactoHijo .boton {
       text-align: center;
       align-self: center; }
+    .contactoPadre__contactoHijo .label {
+      padding-right: 1rem; }
     .contactoPadre__contactoHijo .boton__nombre {
       max-width: 15rem;
       max-height: 4rem;

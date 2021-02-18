@@ -47,31 +47,50 @@
 			</div>
 		</div>
     </header>
-	<main>
+	<main class="mainContacto">
 		<h1 class="titulo">Contactate</h1>
 		<div class="container-fluid">
 			<form class="contactoPadre row">
-				<label class="contactoPadre__contactoHijo consulta_texto col-xs-12 col-lg-12" for="servicio">Consulta sobre:</label>
-				<div class="row contactoPadre__contactoHijo consulta_clases_presupuesto">
-					<input class="col-xs-2 col-lg-2 boton boton__clases" type="radio" name="servicio" value="Clases" required><div class="col-xs-4 col-lg-4">Clases</div>
-					<input class="col-xs-2 col-lg-2 boton boton__presupuesto"type="radio" name="servicio" value="Presupuesto" required><div class="col-xs-4 col-lg-4">Presupuestos</div>
+				<div>
+					<label class="contactoPadre__contactoHijo consulta_texto" for="servicio">Consulta sobre:</label>
+				<div class="row contactoPadre__contactoHijo consulta_clases_presupuesto form-group">
+					
+					<div class="contactoPadre__contactoHijo-boton_clases"><input class="boton" type="radio" name="servicio" value="Clases" required><span>Clases</span></div>
+					<div class="ontactoPadre__contactoHijo-boton_presupuesto"><input class="boton"type="radio" name="servicio" value="Presupuesto" required><span>Presupuesto de trabajo</span></div>
 				</div>
-				<div class="row contactoPadre__contactoHijo justify-content-center">
-					<label class="col-xs-12 col-lg-12" for="nombre">Nombre:</label>
-					<input class="boton boton__nombre col-xs-12 col-lg-12 form-control" type="text" name="nombre" placeholder="Nombre" required>
+				<div class="row contactoPadre__contactoHijo form-group">
+					<label for="nombre" class="control-label">Nombre:</label>
+					<input class="boton boton__nombre form-control" type="text" name="nombre" placeholder="Nombre">
 				</div>
-				<div class="contactoPadre__contactoHijo justify-content-center">
-					<label class="col-xs-12 col-lg-12" for="apellido">Apellido:</label>
-					<input class="boton boton__apellido col-xs-12 col-lg-12 form-control" type="text" name="apellido" placeholder="Apellido">
+				<div class="row contactoPadre__contactoHijo form-group">
+				
+					<label for="apellido" class="control-label">Apellido:</label>
+					<input class="boton boton__apellido form-control" type="text" name="apellido" placeholder="Apellido">
 				</div>
-				<div class="row contactoPadre__contactoHijo">
-					<label class="col-xs-6 col-lg-6" for="edad">Rango de edad</label>
-					<select class="col-xs-6 col-lg-6 boton boton__edades" name="edad" required>
+				<!-- ****para probar este select**** 
+				<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+				<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+				  <option selected>Choose...</option>
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>  más en:  https://getbootstrap.com/docs/4.0/components/forms/-->
+				<div class="row contactoPadre__contactoHijo form-group">
+					<label for="edad" class="control-label">Rango de edad</label>
+					<select class="form-control boton boton__edades" name="edad" required>
 						<option value="niños">10 a 17</option>
 						<option value="jóvenes">18 a 25</option>
 						<option value="adultos">25 a 60</option>
 						<option value="tercera edad">60 o más</option>
 					</select>
+				</div>
+				<div class="row contactoPadre__contactoHijo form-group">
+					<div>Enviá una foto de referencia del servicio que buscás. Peso máximo de #, archivos admitidos: .jpg .png .jpeg .pdf</div>
+					<input class="boton contactoPadre__contactoHijo-archivo form-control" type="file" name="archivo" >
+				</div>
+				<div class="row contactoPadre__contactoHijo form-group">
+				<label class="control-label" for="email">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
 				</div>
 				<!--<div class="contactoPadre__contactoHijo">Dejá acá tu consulta o pedido de presupuesto.<br>Te contactaremos a la brevedad.</div>-->
 					<div class="row"><textarea class="col-xs-12 col-lg-12 contactoPadre__contactoHijo ingresoTexto form-control" required placeholder="Dejá acá tu consulta o pedido de presupuesto. Te contactaremos a la brevedad."></textarea>
