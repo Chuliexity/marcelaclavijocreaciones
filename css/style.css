@@ -97,90 +97,33 @@ main {
 
 /*INDEX*/
 .mainContainer {
-  padding: 3rem;
   width: 95%;
-  height: 80rem;
+  height: 75rem;
   background: white; }
-
-.mainContainer__slider {
-  width: 100%;
-  height: 80rem; }
-
-.swiper-wrapper {
-  text-align: center;
-  padding: 2rem;
-  margin: 0px; }
-  .swiper-wrapper .slider-image {
-    border-radius: 80%;
+  .mainContainer__slider {
+    width: 100%;
+    height: 70rem; }
+  .mainContainer__slider-wrapper {
+    height: 50rem;
+    text-align: center;
+    padding: 2rem;
+    margin: 0px; }
+  .mainContainer__slider-wrapperImage {
     max-width: 100%;
     max-height: 100%; }
+  .mainContainer .swiper-button-prev {
+    color: #A6036D;
+    opacity: 0.2; }
+  .mainContainer .swiper-button-prev:hover {
+    color: #A6036D;
+    opacity: 0.7; }
+  .mainContainer .swiper-button-next {
+    color: #A6036D;
+    opacity: 0.2; }
+  .mainContainer .swiper-button-next:hover {
+    color: #A6036D;
+    opacity: 0.7; }
 
-/*
-  .swiper-container {
-    margin: 0px;
-    padding: 0px;
-    height: 75rem;
-    width: 100%;
-  }
-
-  .swiper-slide {
-    object-fit: cover;
-    width: 70rem;
-    height: 70rem;
-  }*/
-mainContainer__boton .swiper-button-prev {
-  color: #A6036D;
-  opacity: 0.3; }
-
-mainContainer__boton .swiper-button-prev:hover {
-  color: #A6036D;
-  opacity: 0.7; }
-
-mainContainer__boton .swiper-button-next {
-  color: #A6036D;
-  opacity: 0.3; }
-
-mainContainer__boton .swiper-button-next:hover {
-  color: #A6036D;
-  opacity: 0.7; }
-
-/*
-    .mainContainer__slider{
-        width: 100%;
-        height: 80rem;
-    }
-
-    .swiper-wrapper{
-        text-align: center;
-        padding: 2rem;
-        margin: 0px;
-
-        .slider-image{
-            border-radius: 80%;
-            max-width: 100%;
-            max-height: 100%;
-              }
-    }
-
-
-
-    .swiper-button-prev{    
-        color: $bordo;
-        opacity: 0.3;
-    }
-        .swiper-button-prev:hover{
-            color: $bordo;
-            opacity: 0.7;
-          }
-    .swiper-button-next{    
-            color: $bordo;
-            opacity: 0.3;
-        }
-        .swiper-button-next:hover{
-            color: $bordo;
-            opacity: 0.7;
-          }
-}*/
 /*TRABAJOS*/
 #tabla {
   color: #A6036D;
@@ -206,24 +149,30 @@ mainContainer__boton .swiper-button-next:hover {
   background-color: #D99AC3;
   height: auto;
   width: 100%;
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  gap: 2rem; }
   .cakeTopper__titulo {
     color: #A6036D;
     text-align: center;
     height: 3rem;
     width: 100%;
     font-size: 3rem;
-    margin-bottom: 2rem; }
+    margin: 2rem; }
   .cakeTopper__imgContainer {
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center; }
+  .cakeTopper__imagenes {
+    width: 100%; }
+  .cakeTopper__img-circulo {
+    align-self: center;
+    justify-self: center;
+    margin: auto;
+    border-radius: 20%;
     padding: 2rem;
-    max-width: 98%;
-    text-align: center; }
-    .cakeTopper__imgContainer .cakeTopper__img--Circulo {
-      border-radius: #D99AC3 2px;
-      align-self: center;
-      justify-self: center;
-      height: 80%;
-      border-radius: 20%; }
+    width: 100%;
+    height: 100%; }
 
 /* Sobre Ella CSS  */
 .infoElla {
@@ -232,13 +181,14 @@ mainContainer__boton .swiper-button-next:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-evenly; }
-  .infoElla__img {
-    align-self: flex-start;
-    max-height: 20rem;
-    transition: all 2s; }
-  .infoElla__img:hover {
-    max-height: 40rem; }
-  .infoElla .textoInformativo {
+  .infoElla__imagen {
+    width: 20rem;
+    height: 20rem;
+    transition: 2s; }
+  .infoElla__imagen:hover {
+    transform: scale(2, 2); }
+  .infoElla__textoInformativo {
+    padding-top: 2rem;
     color: #A6036D; }
 
 /* Contacto CSS  */
