@@ -118,10 +118,12 @@ main {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: $bordo;
+    color: $rosa;
     transition: 2s;
     }
         &__linkArriba:hover{
+            color: $bordo;
+            text-decoration: none;
             transform: scale (all);
             font-size: 2.2rem;
         }
@@ -164,15 +166,18 @@ main {
 }
 }
 
-                        /*TRABAJOS*/
+                        /*SERVICIOS*/
 
-#tabla { 
+#tabla {
+    width: 80%;
+    padding: 1rem;
   color: $bordo;
   background-color: $blanco;
   border-style: hidden;
   margin: 4rem auto auto auto;
  
   .itemsTabla{
+    padding: 2.5rem;
     border: hidden;
     text-align: center;
   }
@@ -183,11 +188,15 @@ main {
 }
 
 .textoComplementario {
+    text-align: center;
+    font-size: 2.2;
     color: $rosaOscuro;
-    margin: auto;
-    text-align: justify;
-    margin-bottom: 20px;
-    max-width: 600px;
+    margin: 2rem auto;
+    max-width: 70rem;
+    a {
+        text-decoration: none;
+        color: $bordo;
+    }
 }
                         /*GALERIA*/
 .cakeTopper{

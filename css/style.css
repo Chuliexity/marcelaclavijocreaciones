@@ -89,9 +89,11 @@ main {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #A6036D;
+    color: #F2059F;
     transition: 2s; }
   .footerContainer__linkArriba:hover {
+    color: #A6036D;
+    text-decoration: none;
     transform: scale all;
     font-size: 2.2rem; }
 
@@ -124,13 +126,16 @@ main {
     color: #A6036D;
     opacity: 0.7; }
 
-/*TRABAJOS*/
+/*SERVICIOS*/
 #tabla {
+  width: 80%;
+  padding: 1rem;
   color: #A6036D;
   background-color: white;
   border-style: hidden;
   margin: 4rem auto auto auto; }
   #tabla .itemsTabla {
+    padding: 2.5rem;
     border: hidden;
     text-align: center; }
   #tabla ol li {
@@ -138,11 +143,14 @@ main {
     padding: 2px; }
 
 .textoComplementario {
+  text-align: center;
+  font-size: 2.2;
   color: #BF047E;
-  margin: auto;
-  text-align: justify;
-  margin-bottom: 20px;
-  max-width: 600px; }
+  margin: 2rem auto;
+  max-width: 70rem; }
+  .textoComplementario a {
+    text-decoration: none;
+    color: #A6036D; }
 
 /*GALERIA*/
 .cakeTopper {
