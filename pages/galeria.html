@@ -11,6 +11,7 @@
 	<!--animaciones-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<!--bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<!--mi css -->
 	<link rel="stylesheet" href="../css/style.css">
@@ -49,18 +50,79 @@
 	<main>
 		<h1 class="titulo">Galería</h1>
 		<div  class="cakeTopper">
-			<div class="cakeTopper__titulo">Cake Toppers</div>
-			<div class="cakeTopper__imgContainer container-fluid">
-				<div class="cakeTopper__imagenes row">
-					<img src="../images/cakeToppers/cakeTopper_elsa.jpg" alt="Cake Topper Elsa Frozen" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
-					<img src="../images/cakeToppers/cakeTopper_numero.jpg" alt="Cake Topper Numero" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
-					<img src="../images/cakeToppers/cakeTopper_fortnite.jpg" alt="Cake Topper Fortnite" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
-					<img src="../images/cakeToppers/cakeTopper_bebes.jpg" alt="Cake Topper Bebes" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
-					<img src="../images/cakeToppers/cakeTopper_comunion.jpg" alt="Cake Topper Comunion" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
-					<img src="../images/cakeToppers/cakeTopper_vampi.jpg" alt="Cake Topper Vampirina" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
-					<img src="../images/cakeToppers/cakeTopper_vespa.jpg" alt="Cake Topper París Vespa" class="cakeTopper__img-circulo col-xs-3 col-xl-3">
+			<!--<div class="cakeTopper__titulo lead">Cake Toppers</div>	-->			
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators
+				<ol class="carousel-indicators">
+				  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				  <li data-target="#myCarousel" data-slide-to="1"></li>
+				  <li data-target="#myCarousel" data-slide-to="2"></li>
+				  <li data-target="#myCarousel" data-slide-to="3"></li>
+				  <li data-target="#myCarousel" data-slide-to="4"></li>
+				  <li data-target="#myCarousel" data-slide-to="5"></li>
+				  <li data-target="#myCarousel" data-slide-to="6"></li>
+				</ol> -->
+			  
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+				  <div class="item active">
+					<img src="../images/cakeToppers/cakeTopper_elsa.jpg" alt="Elsa Frozen Cake Topper">
+					<div class="carousel-caption">
+					  <h3>Elsa</h3>
+					  <p>Cake Topper de Elsa de Frozen.</p>
+					</div>
+				  </div>
+			  
+				  <div class="item">
+					<img src="../images/cakeToppers/cakeTopper_vampi.jpg" alt="Vampirina Cake Topper">
+					<div class="carousel-caption">
+					  <h3>Vampirina</h3>
+					  <p>Cake Topper de Vampirina y sus amigos.</p>
+					</div>
+				  </div>
+			  
+				  <div class="item">
+					<img src="../images/cakeToppers/cakeTopper_numero.jpg" alt="Numero Cake Topper">
+					<div class="carousel-caption">
+					  <h3>Número 2</h3>
+					  <p>Cake Topper personalizado con la edad del agasajado.</p>
+					</div>
+				  </div>
+			  
+				  <div class="item">
+					<img src="../images/cakeToppers/cakeTopper_fortnite.jpg" alt="Fortnite Cake Topper">
+					<div class="carousel-caption">
+					  <h3>Fortnite</h3>
+					  <p>Cake Topper de Fortnite, varias piezas.</p>
+					</div>
+				  </div>
 				</div>
+			  
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+		</div>
+			
+
+		<!--	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<li data-target="#myCarousel" data-slide-to="1"><img src="../images/cakeToppers/cakeTopper_elsa.jpg" alt="Cake Topper Elsa Frozen" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
+				<span class="carousel-caption">Cake Topper - Elsa</span>
+				<li data-target="#myCarousel" data-slide-to="2"><img src="../images/cakeToppers/cakeTopper_numero.jpg" alt="Cake Topper Numero" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
+				<li data-target="#myCarousel" data-slide-to="3"><img src="../images/cakeToppers/cakeTopper_fortnite.jpg" alt="Cake Topper Fortnite" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"><img src="../images/cakeToppers/cakeTopper_bebes.jpg" alt="Cake Topper Bebes" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
+				<li data-target="#myCarousel" data-slide-to="5"><img src="../images/cakeToppers/cakeTopper_comunion.jpg" alt="Cake Topper Comunion" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
+				<li data-target="#myCarousel" data-slide-to="6"><img src="../images/cakeToppers/cakeTopper_vampi.jpg" alt="Cake Topper Vampirina" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
+				<li data-target="#myCarousel" data-slide-to="7"><img src="../images/cakeToppers/cakeTopper_vespa.jpg" alt="Cake Topper París Vespa" class="cakeTopper__img-circulo col-xs-3 col-xl-3"></li>
 			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next"></a>-->
 	</main>
     <footer class="footerContainer">
         <nav class=" footerContainer__nav">
@@ -75,8 +137,10 @@
 	</footer>
 	<!-- scripts bootstrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+	<!--mi script-->
+	<script type="text/javascript" src="../scripts/scripts.js"></script>
 </body>
 </html>
