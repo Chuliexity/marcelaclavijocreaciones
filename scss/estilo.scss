@@ -129,43 +129,87 @@ main {
         }
 }
                         /*INDEX*/
-.mainContainer{
-    width: 95%;
-    height: 75rem;
-    background: $blanco;
 
-    &__slider{
-        width: 100%;
-        height: 70rem; }
-    &__slider-wrapper{
-    height: 50rem;
+.wrapper{
     text-align: center;
-    padding: 2rem;
-    margin: 0px;
-}
-&__slider-wrapperImage{
-    max-width: 100%;
-    max-height: 100%;
-      }
-.swiper-button-prev{
-    color: $bordo;
-    opacity: 0.2;
-}
-.swiper-button-prev:hover{
-    color: $bordo;
-    opacity: 0.7;
-}
+    margin: auto;
+	display: flex;
+	width: 98%;
+    gap: 1rem;
+	justify-content: space-evenly;}
 
-.swiper-button-next{
-    color: $bordo;
-    opacity: 0.2;
-}
-.swiper-button-next:hover{
-    color: $bordo;
-    opacity: 0.7;
-}
-}
+.card{
+	width: 280px;
+	height: 360px;
+	border-radius: 15px;
+	padding: 1.5rem;
+	background: $blanco;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	transition: 0.4s ease-out;
+	box-shadow: 0 0.7rem 0.5rem rgba($rosaOscuro, 0.4);
+	&:hover{
+		transform: translateY(20px);
+		&:before{
+			opacity: 1;}
+		.info{
+			opacity: 1;
+			transform: translateY(0px);}}
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		background: rgba($negro, 0.6);
+		z-index: 2;
+		transition: 0.5s;
+		opacity: 0;}
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 15px;}
 
+	.info{
+		position: relative;
+		z-index: 3;
+		color: $grisClaro;
+		opacity: 0;
+		transform: translateY(30px);
+		transition: 0.5s;
+		h1{
+			margin: 0px;}
+		p{
+			letter-spacing: 1px;
+			font-size: 15px;
+			margin-top: 8px;}
+		button{
+            padding: 0.6rem;
+			outline: none;
+			border: none;
+			border-radius: 3px;
+			background: $lila;
+			color: $rosaOscuro;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 0.4s ease;
+            a{
+                color: $grisClaro;
+                text-decoration: none;
+                &:hover{
+                    color: $bordo;}
+                }
+            }
+    }
+}
                         /*SERVICIOS*/
 
 #tabla {
