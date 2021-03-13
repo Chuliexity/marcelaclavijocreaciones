@@ -6,7 +6,7 @@ html {
 /* BODY */
 body {
   background-image: url(../images/fondoBody_floral.jpg);
-  height: 90rem;
+  height: 80rem;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,6 +117,10 @@ main {
   align-items: flex-end;
   transition: 0.4s ease-out;
   box-shadow: 0 0.7rem 0.5rem rgba(191, 4, 126, 0.4); }
+  @media screen and (max-width: 992px) {
+    .card {
+      margin: 2rem;
+      padding: 1rem; } }
   .card:hover {
     transform: translateY(20px); }
     .card:hover:before {
@@ -175,26 +179,31 @@ main {
           color: #A6036D; }
 
 /*SERVICIOS*/
-#tabla {
+table {
   width: 80%;
-  padding: 1rem;
-  color: #A6036D;
-  background-color: white;
+  color: #F2059F;
+  background-color: rgba(255, 255, 255, 0.5);
   border-style: hidden;
-  margin: 4rem auto auto auto; }
-  #tabla .itemsTabla {
-    padding: 2.5rem;
+  padding: 2rem;
+  margin: auto; }
+  table strong {
+    color: #BF047E; }
+  table h1 {
+    color: #A6036D;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    margin-top: 3rem;
+    margin-bottom: 0px; }
+  table .itemsTabla {
     border: hidden;
     text-align: center; }
-  #tabla ol li {
-    list-style-type: circle;
-    padding: 2px; }
 
 .textoComplementario {
   text-align: center;
-  font-size: 2.2;
+  font-size: 2.1rem;
   color: #BF047E;
-  margin: 2rem auto;
+  margin: 1rem auto 0 auto;
+  padding: 1rem;
   max-width: 70rem; }
   .textoComplementario a {
     text-decoration: none;
@@ -225,20 +234,36 @@ main {
 
 /* Sobre Ella CSS  */
 .infoElla {
+  margin: auto;
+  text-align: justify;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: space-evenly; }
-  .infoElla__imagen {
+  align-content: space-evenly;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .infoElla__imagen-scale {
     width: 20rem;
     height: 20rem;
-    transition: 2s; }
+    margin-top: 1rem;
+    transition: 2s;
+    position: relative;
+    z-index: 2; }
+  .infoElla__imagen-scale:hover {
+    transform: scale(2, 2); }
+  .infoElla__imagen {
+    transition: 2s;
+    z-index: 2; }
   .infoElla__imagen:hover {
     transform: scale(2, 2); }
   .infoElla__textoInformativo {
     padding-top: 2rem;
-    color: #A6036D; }
+    color: #BF047E;
+    z-index: 1; }
+    .infoElla__textoInformativo a, .infoElla__textoInformativo b {
+      text-decoration: none;
+      color: #A6036D; }
 
 /* Contacto CSS  */
 .contactoPadre {

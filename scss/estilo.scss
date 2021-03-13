@@ -13,7 +13,7 @@ html{
                         /* BODY */
 body { 
     background-image: url(../images/fondoBody_floral.jpg);
-    height: 90rem;
+    height: 80rem;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,7 +136,8 @@ main {
 	display: flex;
 	width: 98%;
     gap: 1rem;
-	justify-content: space-evenly;}
+	justify-content: space-evenly;
+}
 
 .card{
 	width: 280px;
@@ -149,6 +150,10 @@ main {
 	align-items: flex-end;
 	transition: 0.4s ease-out;
 	box-shadow: 0 0.7rem 0.5rem rgba($rosaOscuro, 0.4);
+    @media screen and (max-width: 992px) {
+        margin: 2rem;
+        padding: 1rem;
+      }
 	&:hover{
 		transform: translateY(20px);
 		&:before{
@@ -212,30 +217,36 @@ main {
 }
                         /*SERVICIOS*/
 
-#tabla {
+table {
     width: 80%;
-    padding: 1rem;
-  color: $bordo;
-  background-color: $blanco;
-  border-style: hidden;
-  margin: 4rem auto auto auto;
+    color: $rosa;
+    background-color: rgba($blanco,0.5);
+    border-style: hidden;
+    padding: 2rem;
+    margin: auto;
+    strong{
+        color: $rosaOscuro;
+    }
+    h1{
+        color: $bordo;
+        text-decoration: underline;
+        text-decoration-thickness: 0.1rem;
+        margin-top: 3rem;
+        margin-bottom: 0px;
+    }
  
   .itemsTabla{
-    padding: 2.5rem;
     border: hidden;
     text-align: center;
-  }
-  ol li {
-    list-style-type: circle;
-    padding: 2px;
   }
 }
 
 .textoComplementario {
     text-align: center;
-    font-size: 2.2;
+    font-size: 2.1rem;
     color: $rosaOscuro;
-    margin: 2rem auto;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
     max-width: 70rem;
     a {
         text-decoration: none;
@@ -276,24 +287,43 @@ main {
 
                               /* Sobre Ella CSS  */
 .infoElla{
+    margin: auto;
+  text-align: justify;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-evenly;
+  width: 80%;
+  background-color: rgba($blanco, 0.5);
 
-  &__imagen{
+  &__imagen-scale{
     width: 20rem;
     height: 20rem;
-    transition: 2s;}
-    &__imagen:hover{
+    margin-top: 1rem;
+    transition: 2s;
+    position: relative;
+    z-index: 2;
+}
+    &__imagen-scale:hover{
         transform: scale(2, 2) ;
 }
-
+    &__imagen{
+        transition: 2s;
+        z-index:2;
+    }
+        &__imagen:hover{
+            transform: scale(2, 2);        
+    }
 
     &__textoInformativo{
         padding-top: 2rem;
-        color:$bordo;
+        color:$rosaOscuro;
+        z-index:1;
+        a, b{
+            text-decoration: none;
+            color: $bordo;
+        }
     }
 }
 
