@@ -1,4 +1,4 @@
-                        /* COLORES */
+                        /* var COLORES */
 $rosa: #F2059F;
 $rosaOscuro: #BF047E;
 $bordo: #A6036D;
@@ -6,11 +6,11 @@ $lila: #D99AC3;
 $grisClaro: #D7D7D9;
 $negro: #000000;
 $blanco: white;
-                        /* HTML */
+                        /*CONFIG GRALES*/
 html{
     font-size: 10px;
   }
-                        /* BODY */
+
 body { 
     background-image: url(../images/fondoBody_floral.jpg);
     height: 80rem;
@@ -22,18 +22,52 @@ body {
     font-size: 2rem;
     width: 100%;
     margin: 0px;
-  }
-                        /*CONFIG GRALES*/
+}
+
 main {
     margin: 4rem;
 }
 .titulo{
-    font-family: "Roboto";
+    font-family: "Bodoni";
     color: $rosaOscuro;
-    margin: 2rem;
+    margin: auto;
     text-align: center;
     font-size: 5rem;
-}
+
+}                        
+    @media screen and (max-width: 992px) {
+        html{
+            font-size: 9px;
+          }
+        .titulo{
+        font-size: 4.5rem;}
+
+        main{
+            margin: auto;
+        }}
+    @media screen and (max-width: 768px) {
+        html{
+            font-size: 8px;
+          }
+        .titulo{
+        font-size: 3rem;
+        }
+        main{
+            margin: auto;
+        }}
+    @media screen and (max-width: 576px) {
+        html{
+            font-size: 7px;
+          }
+        .titulo{
+        font-size: 2rem;
+        }
+        main{
+            margin: auto;
+        }
+}                        
+
+
 
                         /* NAV */
 .barraNav{
@@ -42,54 +76,51 @@ main {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: nowrap;
+    font-size: 1.5rem;
     height: 20rem;
     width: 98%;
     margin-bottom: 2rem;
-    
 
+    .barraNav__menu{
+        width: 70%;
+        align-self: center;
+        justify-content: flex-start;
+        .nav-items{
+            word-spacing: 0.5rem;
+            letter-spacing: 0.5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .nav-link{ 
+            margin: 0 1rem;
+            padding: 0.8rem;
+            color: $bordo;
+        }
+        .active{ 
+            color: $grisClaro;
+            background-color: $rosaOscuro;
+            letter-spacing: 1.3rem;
+        }
+    }
     .barraNav__logo{
-
+        width:  30%;
+        max-width: 15rem;
+        min-width:  12rem;
+        margin: 0 auto;
         align-self: center;
         justify-self: center;
-
-        .barraNav__logo-imagen{
-            width: 15rem;
-            height: 15rem;
+        &-imagen, &-titulo{
+            width:100%;
+            height: auto;
             padding: 0.2rem;
+            @media screen and (max-width: 992px) {
+                max-width: 13rem;}
+            @media screen and (max-width: 768px) {
+                max-width: 11rem;}
+            @media screen and (max-width: 576px) {
+                max-width: 9rem;}   
         }
-        .barraNav__logo-titulo{
-            height: 5rem;
-            padding: 0.2rem;
-            margin: 0px;
-            }
-    }
-        .barraNav__menu{
-            width: 80%;
-            align-self: center;
-            padding: 2rem;
-
-            
-            .nav-items{
-                
-                word-spacing: 0.5rem;
-                letter-spacing: 0.5rem;
-                padding-left: 3rem;
-                padding-right: 3rem;
-
-            }
-
-            .nav-link{ 
-                margin: 0 1rem;
-                padding: 0.8rem;
-                color: $bordo;
-            } 
-            .active{ 
-                color: $grisClaro;
-                background-color: $rosaOscuro;
-                letter-spacing: 1.3rem;
-            }
-
-        }
+}
 }
                             /*FOOTER*/
 .footerContainer{
@@ -106,13 +137,19 @@ main {
         align-self: center;
         justify-self: center;
         width: 4rem;
-        height: 4rem;
-        transition: 2s;}
-        .footerContainer__nav-imagen:hover{
+        height: auto;
+        transition: 2s;
+        &:hover{
             transform: scale(1.2, 1.2) ;
     }
-
+        @media screen and (max-width: 992px) {
+            max-width: 3rem;}
+        @media screen and (max-width: 768px) {
+            max-width: 2.5rem;}
+        @media screen and (max-width: 576px) {
+            max-width: 2rem;}   
         }
+}
     &__linkArriba{
     margin-bottom: 2rem;
     display: block;
@@ -140,9 +177,10 @@ main {
 }
 
 .card{
-	width: 280px;
-	height: 360px;
-	border-radius: 15px;
+    width: 100%;
+	max-width: 28rem;
+	height: 36rem;
+	border-radius: 1.5rem;
 	padding: 1.5rem;
 	background: $blanco;
 	position: relative;
@@ -150,10 +188,14 @@ main {
 	align-items: flex-end;
 	transition: 0.4s ease-out;
 	box-shadow: 0 0.7rem 0.5rem rgba($rosaOscuro, 0.4);
+    
     @media screen and (max-width: 992px) {
         margin: 2rem;
-        padding: 1rem;
-      }
+        padding: 1rem;}
+    @media screen and (max-width: 768px) {
+        margin: 1.5rem;
+        padding: 1rem;}
+
 	&:hover{
 		transform: translateY(20px);
 		&:before{
@@ -184,23 +226,23 @@ main {
 		border-radius: 15px;}
 
 	.info{
+        margin: auto;
 		position: relative;
 		z-index: 3;
 		color: $grisClaro;
 		opacity: 0;
 		transform: translateY(30px);
 		transition: 0.5s;
-		h1{
-			margin: 0px;}
 		p{
-			letter-spacing: 1px;
-			font-size: 15px;
-			margin-top: 8px;}
+			letter-spacing: 0.1rem;
+			font-size: 1.5rem;
+            
+			margin-top: 0.8rem;}
 		button{
             padding: 0.6rem;
 			outline: none;
 			border: none;
-			border-radius: 3px;
+			border-radius: 0.3rem;
 			background: $lila;
 			color: $rosaOscuro;
 			font-weight: bold;
@@ -213,18 +255,34 @@ main {
                     color: $bordo;}
                 }
             }
-    }
+            @media screen and (max-width: 992px) {
+                p{
+                    letter-spacing: 0.1rem;
+                    font-size: 1.2rem;
+                    margin-top: 0.6rem;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                p{
+                    letter-spacing: 0.1rem;
+                    font-size: 1rem;
+                    margin-top: 0.4rem;
+                }
+            }
+
+        }
 }
+
                         /*SERVICIOS*/
 
 table {
     width: 80%;
     color: $rosa;
-    background-color: rgba($blanco,0.5);
+    background-color: rgba($blanco,0.7);
     border-style: hidden;
     padding: 2rem;
     margin: auto;
-    strong{
+    b{
         color: $rosaOscuro;
     }
     h1{
@@ -254,155 +312,148 @@ table {
     }
 }
                         /*GALERIA*/
-.cakeTopper{
-    background-color: $lila;
-    width: 100%;
+
     
-    .carousel-caption{
-        text-align: right;
-        color: $rosaOscuro;
-        }
-    .item{
-       object-fit: cover;
-    }
-
-
-    /*&__titulo{
-    color: $bordo;
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 5rem;
-    padding: 1rem;
-    }
-
-    &__img-circulo {
-            border-radius: 20%;
-            width: 100%;
-            height: 100%;
-            }*/
-
-
-}
-
 
                               /* Sobre Ella CSS  */
 .infoElla{
-    margin: auto;
-  text-align: justify;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-evenly;
-  width: 80%;
-  background-color: rgba($blanco, 0.5);
+    margin: 1rem auto;
+    width: 95%;
+    background-color: rgba($blanco, 0.7);
+    p{
+        margin: 0;
+        width: 100%;
+        color:$rosa;
+        z-index:1;
+        text-align: justify;
+    }
+    a, b, em {
+        text-decoration: none;
+        color: $rosaOscuro;
+    }
+    .infoElla__textoInformativo{
+        padding: 2rem auto;
+        margin: auto;
+        z-index: 0;
+        @media screen and (max-width: 992px) {
+            padding: 1.8rem;
+            }
+        @media screen and (max-width: 768px) {
+            padding: 1.4rem;
+            }
+        
+    &Centro{
+        padding: 1rem;
+        }
 
+    &Final{
+        background-color: rgba($grisClaro,0.2);
+        margin: 1.5rem;
+    }
+    }
+
+  
   &__imagen-scale{
-    width: 20rem;
-    height: 20rem;
-    margin-top: 1rem;
+    width:100%;
+    height: auto;  
+    max-width: 29rem;
+    margin: 1rem auto;
+    padding: 1rem;
     transition: 2s;
     position: relative;
     z-index: 2;
-}
-    &__imagen-scale:hover{
+    &:hover{
         transform: scale(2, 2) ;
-}
-    &__imagen{
-        transition: 2s;
-        z-index:2;
     }
-        &__imagen:hover{
-            transform: scale(2, 2);        
+@media screen and (max-width: 768px) {
+    max-width: 20rem;
+    padding: 1.8rem;
     }
+    @media screen and (max-width: 576px) {
+    max-width: 18rem;
+    padding: 1.5rem;
+    }
+  }
+    
+    .contenedor_txtImg{
+        
+        max-width: 120rem;
+        width: 92%;
+           .infoElla__imagen{
+            
+            width: auto;
+            height: 100%;
+            min-width: 10rem;
+            max-width: 28rem;
+            transition: 2s;
+            z-index: 1;
+            @media screen and (max-width: 992px) {
+                margin: auto;
+                max-width: 25rem;
+                padding: 2rem;
+                }
+            @media screen and (max-width: 768px) {
+                margin: auto;
+                max-width: 20rem;
+                padding: 1.8rem;
+                }
+            @media screen and (max-width: 576px) {
+                margin: auto;
+                max-width: 15rem;
+                padding: 1.5rem;    
+            }
+                &:hover{
+                    transform: scale(2, 2);
+                    z-index:2;
+            }
 
-    &__textoInformativo{
-        padding-top: 2rem;
-        color:$rosaOscuro;
-        z-index:1;
-        a, b{
-            text-decoration: none;
-            color: $bordo;
         }
+        
+
     }
 }
 
 
                               /* Contacto CSS  */
-.contactoPadre {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    border: none;
-    font-size: 2.5rem;
+.mainContacto{
+    margin: auto;
+    width: 90%;
     
+    .ContactoPadre__contenedor{
+        text-align: center;
+        padding: 2rem;
+        margin: auto;
+        background-color: rgba($blanco, 0.7);
+        background-size: width(70rem);
 
-      &__contactoHijo {
-      margin: 0.5rem;
-      color: $bordo;
-      flex-grow: 1;
-      .consulta_texto{
-        font-size: 2.2rem;
-      }
-      option {
-        font-size: 2rem;
-        font-weight: normal;
-        display: block;
-        color: $bordo; 
-        white-space: pre-line;
-        padding: 0.5rem;
-      }
-        &__contactoHijo-consulta_clases_presupuesto {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
+        &-texto{
+            margin: 0;
+            width: 100%;
+            color:$rosa;          
         }
-        &.ingresoTexto {
-        flex-grow: 2;
-        font-size: 2rem;
-        width: 30rem;
-        height: 15rem;
-        border-style: hidden;
+        a, b{
+            text-decoration: none;
+            color: $rosaOscuro;
         }
-        &.ingresoTexto:focus{
-            width: 50rem;
-            font-size: 2rem;
+        h1,h2{
+        color: $bordo;
         }
-        .boton {
-            text-align: center;
-            align-self: center;
-        }
-        .label{
-            padding-right: 1rem;
-        }
-        .boton__nombre {
-            max-width: 15rem;
-            max-height: 4rem;
-            font-size: 2rem;
-            } 
-        .boton__apellido{
-            max-width: 15rem;
-            max-height: 4rem;
-            font-size: 2rem;
-        }
-        .boton__nombre:focus {
-            max-width: 20rem;
-            font-size: 2rem;
-        }
-        .boton__apellido:focus {
-            max-width: 20rem;
-            font-size: 2rem;
-        }
-        .boton__enviar:hover {
-            background-color: $rosaOscuro;
-            color: white;
-        width: 24rem;
-        }
-        .boton__vaciarFormulario:hover {
-            background-color: $rosaOscuro;
-            color: white;
-            width: 38rem;
-        }
+
+
+        table{
+            padding: 2rem auto;
+            margin: auto;
+            td{
+                color: $rosa;
+            }
+            @media screen and (max-width: 992px) {
+                padding: 1.8rem;
+                }
+            @media screen and (max-width: 768px) {
+                padding: 1.4rem;
+                }
     }
+    }
+
+
 }

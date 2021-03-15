@@ -1,9 +1,8 @@
-/* COLORES */
-/* HTML */
+/* var COLORES */
+/*CONFIG GRALES*/
 html {
   font-size: 10px; }
 
-/* BODY */
 body {
   background-image: url(../images/fondoBody_floral.jpg);
   height: 80rem;
@@ -16,16 +15,39 @@ body {
   width: 100%;
   margin: 0px; }
 
-/*CONFIG GRALES*/
 main {
   margin: 4rem; }
 
 .titulo {
-  font-family: "Roboto";
+  font-family: "Bodoni";
   color: #BF047E;
-  margin: 2rem;
+  margin: auto;
   text-align: center;
   font-size: 5rem; }
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 9px; }
+  .titulo {
+    font-size: 4.5rem; }
+  main {
+    margin: auto; } }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px; }
+  .titulo {
+    font-size: 3rem; }
+  main {
+    margin: auto; } }
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 7px; }
+  .titulo {
+    font-size: 2rem; }
+  main {
+    margin: auto; } }
 
 /* NAV */
 .barraNav {
@@ -34,29 +56,19 @@ main {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
+  font-size: 1.5rem;
   height: 20rem;
   width: 98%;
   margin-bottom: 2rem; }
-  .barraNav .barraNav__logo {
-    align-self: center;
-    justify-self: center; }
-    .barraNav .barraNav__logo .barraNav__logo-imagen {
-      width: 15rem;
-      height: 15rem;
-      padding: 0.2rem; }
-    .barraNav .barraNav__logo .barraNav__logo-titulo {
-      height: 5rem;
-      padding: 0.2rem;
-      margin: 0px; }
   .barraNav .barraNav__menu {
-    width: 80%;
+    width: 70%;
     align-self: center;
-    padding: 2rem; }
+    justify-content: flex-start; }
     .barraNav .barraNav__menu .nav-items {
       word-spacing: 0.5rem;
       letter-spacing: 0.5rem;
-      padding-left: 3rem;
-      padding-right: 3rem; }
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; }
     .barraNav .barraNav__menu .nav-link {
       margin: 0 1rem;
       padding: 0.8rem;
@@ -65,6 +77,26 @@ main {
       color: #D7D7D9;
       background-color: #BF047E;
       letter-spacing: 1.3rem; }
+  .barraNav .barraNav__logo {
+    width: 30%;
+    max-width: 15rem;
+    min-width: 12rem;
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center; }
+    .barraNav .barraNav__logo-imagen, .barraNav .barraNav__logo-titulo {
+      width: 100%;
+      height: auto;
+      padding: 0.2rem; }
+      @media screen and (max-width: 992px) {
+        .barraNav .barraNav__logo-imagen, .barraNav .barraNav__logo-titulo {
+          max-width: 13rem; } }
+      @media screen and (max-width: 768px) {
+        .barraNav .barraNav__logo-imagen, .barraNav .barraNav__logo-titulo {
+          max-width: 11rem; } }
+      @media screen and (max-width: 576px) {
+        .barraNav .barraNav__logo-imagen, .barraNav .barraNav__logo-titulo {
+          max-width: 9rem; } }
 
 /*FOOTER*/
 .footerContainer {
@@ -80,10 +112,19 @@ main {
       align-self: center;
       justify-self: center;
       width: 4rem;
-      height: 4rem;
+      height: auto;
       transition: 2s; }
-    .footerContainer__nav .footerContainer__nav-imagen:hover {
-      transform: scale(1.2, 1.2); }
+      .footerContainer__nav .footerContainer__nav-imagen:hover {
+        transform: scale(1.2, 1.2); }
+      @media screen and (max-width: 992px) {
+        .footerContainer__nav .footerContainer__nav-imagen {
+          max-width: 3rem; } }
+      @media screen and (max-width: 768px) {
+        .footerContainer__nav .footerContainer__nav-imagen {
+          max-width: 2.5rem; } }
+      @media screen and (max-width: 576px) {
+        .footerContainer__nav .footerContainer__nav-imagen {
+          max-width: 2rem; } }
   .footerContainer__linkArriba {
     margin-bottom: 2rem;
     display: block;
@@ -107,9 +148,10 @@ main {
   justify-content: space-evenly; }
 
 .card {
-  width: 280px;
-  height: 360px;
-  border-radius: 15px;
+  width: 100%;
+  max-width: 28rem;
+  height: 36rem;
+  border-radius: 1.5rem;
   padding: 1.5rem;
   background: white;
   position: relative;
@@ -120,6 +162,10 @@ main {
   @media screen and (max-width: 992px) {
     .card {
       margin: 2rem;
+      padding: 1rem; } }
+  @media screen and (max-width: 768px) {
+    .card {
+      margin: 1.5rem;
       padding: 1rem; } }
   .card:hover {
     transform: translateY(20px); }
@@ -150,23 +196,22 @@ main {
     left: 0;
     border-radius: 15px; }
   .card .info {
+    margin: auto;
     position: relative;
     z-index: 3;
     color: #D7D7D9;
     opacity: 0;
     transform: translateY(30px);
     transition: 0.5s; }
-    .card .info h1 {
-      margin: 0px; }
     .card .info p {
-      letter-spacing: 1px;
-      font-size: 15px;
-      margin-top: 8px; }
+      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
+      margin-top: 0.8rem; }
     .card .info button {
       padding: 0.6rem;
       outline: none;
       border: none;
-      border-radius: 3px;
+      border-radius: 0.3rem;
       background: #D99AC3;
       color: #BF047E;
       font-weight: bold;
@@ -177,16 +222,26 @@ main {
         text-decoration: none; }
         .card .info button a:hover {
           color: #A6036D; }
+    @media screen and (max-width: 992px) {
+      .card .info p {
+        letter-spacing: 0.1rem;
+        font-size: 1.2rem;
+        margin-top: 0.6rem; } }
+    @media screen and (max-width: 768px) {
+      .card .info p {
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+        margin-top: 0.4rem; } }
 
 /*SERVICIOS*/
 table {
   width: 80%;
   color: #F2059F;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border-style: hidden;
   padding: 2rem;
   margin: auto; }
-  table strong {
+  table b {
     color: #BF047E; }
   table h1 {
     color: #A6036D;
@@ -210,119 +265,110 @@ table {
     color: #A6036D; }
 
 /*GALERIA*/
-.cakeTopper {
-  background-color: #D99AC3;
-  width: 100%;
-  /*&__titulo{
-    color: $bordo;
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 5rem;
-    padding: 1rem;
-    }
-
-    &__img-circulo {
-            border-radius: 20%;
-            width: 100%;
-            height: 100%;
-            }*/ }
-  .cakeTopper .carousel-caption {
-    text-align: right;
-    color: #BF047E; }
-  .cakeTopper .item {
-    object-fit: cover; }
-
 /* Sobre Ella CSS  */
 .infoElla {
-  margin: auto;
-  text-align: justify;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-evenly;
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.5); }
+  margin: 1rem auto;
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.7); }
+  .infoElla p {
+    margin: 0;
+    width: 100%;
+    color: #F2059F;
+    z-index: 1;
+    text-align: justify; }
+  .infoElla a, .infoElla b, .infoElla em {
+    text-decoration: none;
+    color: #BF047E; }
+  .infoElla .infoElla__textoInformativo {
+    padding: 2rem auto;
+    margin: auto;
+    z-index: 0; }
+    @media screen and (max-width: 992px) {
+      .infoElla .infoElla__textoInformativo {
+        padding: 1.8rem; } }
+    @media screen and (max-width: 768px) {
+      .infoElla .infoElla__textoInformativo {
+        padding: 1.4rem; } }
+    .infoElla .infoElla__textoInformativoCentro {
+      padding: 1rem; }
+    .infoElla .infoElla__textoInformativoFinal {
+      background-color: rgba(215, 215, 217, 0.2);
+      margin: 1.5rem; }
   .infoElla__imagen-scale {
-    width: 20rem;
-    height: 20rem;
-    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    max-width: 29rem;
+    margin: 1rem auto;
+    padding: 1rem;
     transition: 2s;
     position: relative;
     z-index: 2; }
-  .infoElla__imagen-scale:hover {
-    transform: scale(2, 2); }
-  .infoElla__imagen {
-    transition: 2s;
-    z-index: 2; }
-  .infoElla__imagen:hover {
-    transform: scale(2, 2); }
-  .infoElla__textoInformativo {
-    padding-top: 2rem;
-    color: #BF047E;
-    z-index: 1; }
-    .infoElla__textoInformativo a, .infoElla__textoInformativo b {
-      text-decoration: none;
-      color: #A6036D; }
+    .infoElla__imagen-scale:hover {
+      transform: scale(2, 2); }
+    @media screen and (max-width: 768px) {
+      .infoElla__imagen-scale {
+        max-width: 20rem;
+        padding: 1.8rem; } }
+    @media screen and (max-width: 576px) {
+      .infoElla__imagen-scale {
+        max-width: 18rem;
+        padding: 1.5rem; } }
+  .infoElla .contenedor_txtImg {
+    max-width: 120rem;
+    width: 92%; }
+    .infoElla .contenedor_txtImg .infoElla__imagen {
+      width: auto;
+      height: 100%;
+      min-width: 10rem;
+      max-width: 28rem;
+      transition: 2s;
+      z-index: 1; }
+      @media screen and (max-width: 992px) {
+        .infoElla .contenedor_txtImg .infoElla__imagen {
+          margin: auto;
+          max-width: 25rem;
+          padding: 2rem; } }
+      @media screen and (max-width: 768px) {
+        .infoElla .contenedor_txtImg .infoElla__imagen {
+          margin: auto;
+          max-width: 20rem;
+          padding: 1.8rem; } }
+      @media screen and (max-width: 576px) {
+        .infoElla .contenedor_txtImg .infoElla__imagen {
+          margin: auto;
+          max-width: 15rem;
+          padding: 1.5rem; } }
+      .infoElla .contenedor_txtImg .infoElla__imagen:hover {
+        transform: scale(2, 2);
+        z-index: 2; }
 
 /* Contacto CSS  */
-.contactoPadre {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  border: none;
-  font-size: 2.5rem; }
-  .contactoPadre__contactoHijo {
-    margin: 0.5rem;
-    color: #A6036D;
-    flex-grow: 1; }
-    .contactoPadre__contactoHijo .consulta_texto {
-      font-size: 2.2rem; }
-    .contactoPadre__contactoHijo option {
-      font-size: 2rem;
-      font-weight: normal;
-      display: block;
-      color: #A6036D;
-      white-space: pre-line;
-      padding: 0.5rem; }
-    .contactoPadre__contactoHijo__contactoHijo-consulta_clases_presupuesto {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center; }
-    .contactoPadre__contactoHijo.ingresoTexto {
-      flex-grow: 2;
-      font-size: 2rem;
-      width: 30rem;
-      height: 15rem;
-      border-style: hidden; }
-    .contactoPadre__contactoHijo.ingresoTexto:focus {
-      width: 50rem;
-      font-size: 2rem; }
-    .contactoPadre__contactoHijo .boton {
-      text-align: center;
-      align-self: center; }
-    .contactoPadre__contactoHijo .label {
-      padding-right: 1rem; }
-    .contactoPadre__contactoHijo .boton__nombre {
-      max-width: 15rem;
-      max-height: 4rem;
-      font-size: 2rem; }
-    .contactoPadre__contactoHijo .boton__apellido {
-      max-width: 15rem;
-      max-height: 4rem;
-      font-size: 2rem; }
-    .contactoPadre__contactoHijo .boton__nombre:focus {
-      max-width: 20rem;
-      font-size: 2rem; }
-    .contactoPadre__contactoHijo .boton__apellido:focus {
-      max-width: 20rem;
-      font-size: 2rem; }
-    .contactoPadre__contactoHijo .boton__enviar:hover {
-      background-color: #BF047E;
-      color: white;
-      width: 24rem; }
-    .contactoPadre__contactoHijo .boton__vaciarFormulario:hover {
-      background-color: #BF047E;
-      color: white;
-      width: 38rem; }
+.mainContacto {
+  margin: auto;
+  width: 90%; }
+  .mainContacto .ContactoPadre__contenedor {
+    text-align: center;
+    padding: 2rem;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: width(70rem); }
+    .mainContacto .ContactoPadre__contenedor-texto {
+      margin: 0;
+      width: 100%;
+      color: #F2059F; }
+    .mainContacto .ContactoPadre__contenedor a, .mainContacto .ContactoPadre__contenedor b {
+      text-decoration: none;
+      color: #BF047E; }
+    .mainContacto .ContactoPadre__contenedor h1, .mainContacto .ContactoPadre__contenedor h2 {
+      color: #A6036D; }
+    .mainContacto .ContactoPadre__contenedor table {
+      padding: 2rem auto;
+      margin: auto; }
+      .mainContacto .ContactoPadre__contenedor table td {
+        color: #F2059F; }
+      @media screen and (max-width: 992px) {
+        .mainContacto .ContactoPadre__contenedor table {
+          padding: 1.8rem; } }
+      @media screen and (max-width: 768px) {
+        .mainContacto .ContactoPadre__contenedor table {
+          padding: 1.4rem; } }
