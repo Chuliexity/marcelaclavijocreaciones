@@ -1,4 +1,9 @@
 /* var COLORES */
+/* mixin y placeholder*/
+body, main, .titulo, .barraNav, .barraNav .barraNav__menu .nav-link, .barraNav .barraNav__logo, .footerContainer__nav, .footerContainer__linkArriba, .wrapper, .card .info, table, table h1, .textoComplementario, .infoElla, .infoElla p, .infoElla__textoInformativo, .infoElla .contenedor_txtImg, .mainContacto, .mainContacto .ContactoPadre__contenedor, .mainContacto .ContactoPadre__contenedor table {
+  margin-left: auto;
+  margin-right: auto; }
+
 /*CONFIG GRALES*/
 html {
   font-size: 10px; }
@@ -12,16 +17,11 @@ body {
   background-size: cover;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
-  width: 100%;
-  margin: 0px; }
-
-main {
-  margin: 4rem; }
+  width: 100%; }
 
 .titulo {
   font-family: "Bodoni";
   color: #BF047E;
-  margin: auto;
   text-align: center;
   font-size: 5rem; }
 
@@ -29,25 +29,19 @@ main {
   html {
     font-size: 9px; }
   .titulo {
-    font-size: 4.5rem; }
-  main {
-    margin: auto; } }
+    font-size: 4.5rem; } }
 
 @media screen and (max-width: 768px) {
   html {
     font-size: 8px; }
   .titulo {
-    font-size: 3rem; }
-  main {
-    margin: auto; } }
+    font-size: 3rem; } }
 
 @media screen and (max-width: 576px) {
   html {
     font-size: 7px; }
   .titulo {
-    font-size: 2rem; }
-  main {
-    margin: auto; } }
+    font-size: 2rem; } }
 
 /* NAV */
 .barraNav {
@@ -70,18 +64,26 @@ main {
       padding-left: 1.5rem;
       padding-right: 1.5rem; }
     .barraNav .barraNav__menu .nav-link {
-      margin: 0 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
       padding: 0.8rem;
-      color: #A6036D; }
+      color: #BF047E;
+      transition: 3s; }
+      .barraNav .barraNav__menu .nav-link:hover {
+        transform: scale(1, 1);
+        color: #000000; }
     .barraNav .barraNav__menu .active {
       color: #D7D7D9;
       background-color: #BF047E;
-      letter-spacing: 1.3rem; }
+      letter-spacing: 1.3rem;
+      transition: 3s; }
+      .barraNav .barraNav__menu .active:hover {
+        transform: scale(1, 1);
+        color: #D99AC3; }
   .barraNav .barraNav__logo {
     width: 30%;
     max-width: 15rem;
     min-width: 12rem;
-    margin: 0 auto;
     align-self: center;
     justify-self: center; }
     .barraNav .barraNav__logo-imagen, .barraNav .barraNav__logo-titulo {
@@ -107,23 +109,23 @@ main {
     flex-direction: row;
     justify-content: center;
     align-content: space-around; }
-    .footerContainer__nav .footerContainer__nav-imagen {
+    .footerContainer__nav-imagen {
       margin: 1rem;
       align-self: center;
       justify-self: center;
       width: 4rem;
       height: auto;
       transition: 2s; }
-      .footerContainer__nav .footerContainer__nav-imagen:hover {
+      .footerContainer__nav-imagen:hover {
         transform: scale(1.2, 1.2); }
       @media screen and (max-width: 992px) {
-        .footerContainer__nav .footerContainer__nav-imagen {
+        .footerContainer__nav-imagen {
           max-width: 3rem; } }
       @media screen and (max-width: 768px) {
-        .footerContainer__nav .footerContainer__nav-imagen {
+        .footerContainer__nav-imagen {
           max-width: 2.5rem; } }
       @media screen and (max-width: 576px) {
-        .footerContainer__nav .footerContainer__nav-imagen {
+        .footerContainer__nav-imagen {
           max-width: 2rem; } }
   .footerContainer__linkArriba {
     margin-bottom: 2rem;
@@ -132,16 +134,15 @@ main {
     text-decoration: none;
     color: #F2059F;
     transition: 2s; }
-  .footerContainer__linkArriba:hover {
-    color: #A6036D;
-    text-decoration: none;
-    transform: scale all;
-    font-size: 2.2rem; }
+    .footerContainer__linkArriba:hover {
+      color: #A6036D;
+      text-decoration: none;
+      transform: scale all;
+      font-size: 2.2rem; }
 
 /*INDEX*/
 .wrapper {
   text-align: center;
-  margin: auto;
   display: flex;
   width: 98%;
   gap: 1rem;
@@ -180,13 +181,13 @@ main {
     top: 0;
     left: 0;
     display: block;
-    width: 100%;
-    height: 100%;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.6);
     z-index: 2;
     transition: 0.5s;
-    opacity: 0; }
+    opacity: 0;
+    width: 100%;
+    height: 100%; }
   .card img {
     width: 100%;
     height: 100%;
@@ -196,7 +197,6 @@ main {
     left: 0;
     border-radius: 15px; }
   .card .info {
-    margin: auto;
     position: relative;
     z-index: 3;
     color: #D7D7D9;
@@ -237,10 +237,9 @@ main {
 table {
   width: 80%;
   color: #F2059F;
-  background-color: rgba(255, 255, 255, 0.7);
   border-style: hidden;
   padding: 2rem;
-  margin: auto; }
+  background-color: rgba(255, 255, 255, 0.7); }
   table b {
     color: #BF047E; }
   table h1 {
@@ -257,7 +256,7 @@ table {
   text-align: center;
   font-size: 2.1rem;
   color: #BF047E;
-  margin: 1rem auto 0 auto;
+  margin-top: 1rem;
   padding: 1rem;
   max-width: 70rem; }
   .textoComplementario a {
@@ -267,33 +266,18 @@ table {
 /*GALERIA*/
 /* Sobre Ella CSS  */
 .infoElla {
-  margin: 1rem auto;
   width: 95%;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.7); }
   .infoElla p {
-    margin: 0;
     width: 100%;
+    height: auto;
     color: #F2059F;
     z-index: 1;
     text-align: justify; }
   .infoElla a, .infoElla b, .infoElla em {
     text-decoration: none;
     color: #BF047E; }
-  .infoElla .infoElla__textoInformativo {
-    padding: 2rem auto;
-    margin: auto;
-    z-index: 0; }
-    @media screen and (max-width: 992px) {
-      .infoElla .infoElla__textoInformativo {
-        padding: 1.8rem; } }
-    @media screen and (max-width: 768px) {
-      .infoElla .infoElla__textoInformativo {
-        padding: 1.4rem; } }
-    .infoElla .infoElla__textoInformativoCentro {
-      padding: 1rem; }
-    .infoElla .infoElla__textoInformativoFinal {
-      background-color: rgba(215, 215, 217, 0.2);
-      margin: 1.5rem; }
   .infoElla__imagen-scale {
     width: 100%;
     height: auto;
@@ -302,9 +286,10 @@ table {
     padding: 1rem;
     transition: 2s;
     position: relative;
-    z-index: 2; }
+    z-index: 1; }
     .infoElla__imagen-scale:hover {
-      transform: scale(2, 2); }
+      transform: scale(2, 2);
+      z-index: 2; }
     @media screen and (max-width: 768px) {
       .infoElla__imagen-scale {
         max-width: 20rem;
@@ -313,57 +298,61 @@ table {
       .infoElla__imagen-scale {
         max-width: 18rem;
         padding: 1.5rem; } }
+  .infoElla__textoInformativo {
+    padding: 2rem auto;
+    z-index: 0;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 992px) {
+      .infoElla__textoInformativo {
+        padding: 1.8rem; } }
+    @media screen and (max-width: 768px) {
+      .infoElla__textoInformativo {
+        padding: 1.4rem; } }
   .infoElla .contenedor_txtImg {
-    max-width: 120rem;
-    width: 92%; }
-    .infoElla .contenedor_txtImg .infoElla__imagen {
-      width: auto;
-      height: 100%;
-      min-width: 10rem;
-      max-width: 28rem;
-      transition: 2s;
-      z-index: 1; }
-      @media screen and (max-width: 992px) {
-        .infoElla .contenedor_txtImg .infoElla__imagen {
-          margin: auto;
-          max-width: 25rem;
-          padding: 2rem; } }
-      @media screen and (max-width: 768px) {
-        .infoElla .contenedor_txtImg .infoElla__imagen {
-          margin: auto;
-          max-width: 20rem;
-          padding: 1.8rem; } }
-      @media screen and (max-width: 576px) {
-        .infoElla .contenedor_txtImg .infoElla__imagen {
-          margin: auto;
-          max-width: 15rem;
-          padding: 1.5rem; } }
-      .infoElla .contenedor_txtImg .infoElla__imagen:hover {
-        transform: scale(2, 2);
-        z-index: 2; }
+    width: 95%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr); }
+    .infoElla .contenedor_txtImg .foto0 {
+      grid-area: 1 / 1 / span 1 / span 4;
+      margin-bottom: 1rem; }
+    .infoElla .contenedor_txtImg .foto1 {
+      grid-area: 2 / 1 / span 1 / span 1; }
+    .infoElla .contenedor_txtImg .texto1 {
+      grid-area: 2 / 2 / span 1 / span 3; }
+    .infoElla .contenedor_txtImg .texto2 {
+      grid-area: 3 / 1 / span 1 / span 3; }
+    .infoElla .contenedor_txtImg .foto2 {
+      grid-area: 3 / 4 / span 1 / span 1; }
+    .infoElla .contenedor_txtImg .foto3 {
+      grid-area: 4 / 1 / span 1 / span 1; }
+    .infoElla .contenedor_txtImg .texto3 {
+      grid-area: 4 / 2 / span 1 / span 3; }
+    .infoElla .contenedor_txtImg .texto4 {
+      grid-area: 5 / 1 / span 1 / span 3; }
+    .infoElla .contenedor_txtImg .foto4 {
+      grid-area: 5 / 4 / span 1 / span 1; }
+    .infoElla .contenedor_txtImg .texto5 {
+      grid-area: 6 / 1 / span 1 / span 4; }
 
 /* Contacto CSS  */
 .mainContacto {
-  margin: auto;
   width: 90%; }
   .mainContacto .ContactoPadre__contenedor {
     text-align: center;
     padding: 2rem;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.7);
-    background-size: width(70rem); }
+    background-color: rgba(255, 255, 255, 0.7); }
     .mainContacto .ContactoPadre__contenedor-texto {
-      margin: 0;
+      color: #F2059F;
       width: 100%;
-      color: #F2059F; }
+      height: auto; }
     .mainContacto .ContactoPadre__contenedor a, .mainContacto .ContactoPadre__contenedor b {
       text-decoration: none;
       color: #BF047E; }
     .mainContacto .ContactoPadre__contenedor h1, .mainContacto .ContactoPadre__contenedor h2 {
       color: #A6036D; }
     .mainContacto .ContactoPadre__contenedor table {
-      padding: 2rem auto;
-      margin: auto; }
+      padding: 2rem auto; }
       .mainContacto .ContactoPadre__contenedor table td {
         color: #F2059F; }
       @media screen and (max-width: 992px) {

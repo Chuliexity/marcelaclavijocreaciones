@@ -6,6 +6,19 @@ $lila: #D99AC3;
 $grisClaro: #D7D7D9;
 $negro: #000000;
 $blanco: white;
+
+                        /* mixin y placeholder*/
+@mixin responsive-size {
+width: 100%;
+height: auto;
+}            
+@mixin fondoBlanco {
+background-color: rgba($blanco, 0.7);
+}
+%margenAuto{
+    margin-left: auto;
+    margin-right: auto;
+}
                         /*CONFIG GRALES*/
 html{
     font-size: 10px;
@@ -21,18 +34,18 @@ body {
     font-family: 'Josefin Sans', sans-serif ;
     font-size: 2rem;
     width: 100%;
-    margin: 0px;
+    @extend %margenAuto;
 }
 
 main {
-    margin: 4rem;
+    @extend %margenAuto;
 }
 .titulo{
     font-family: "Bodoni";
     color: $rosaOscuro;
-    margin: auto;
     text-align: center;
     font-size: 5rem;
+    @extend %margenAuto;
 
 }                        
     @media screen and (max-width: 992px) {
@@ -41,10 +54,7 @@ main {
           }
         .titulo{
         font-size: 4.5rem;}
-
-        main{
-            margin: auto;
-        }}
+}
     @media screen and (max-width: 768px) {
         html{
             font-size: 8px;
@@ -52,18 +62,13 @@ main {
         .titulo{
         font-size: 3rem;
         }
-        main{
-            margin: auto;
-        }}
+        }
     @media screen and (max-width: 576px) {
         html{
             font-size: 7px;
           }
         .titulo{
         font-size: 2rem;
-        }
-        main{
-            margin: auto;
         }
 }                        
 
@@ -80,6 +85,7 @@ main {
     height: 20rem;
     width: 98%;
     margin-bottom: 2rem;
+    @extend %margenAuto;
 
     .barraNav__menu{
         width: 70%;
@@ -92,26 +98,39 @@ main {
             padding-right: 1.5rem;
         }
         .nav-link{ 
-            margin: 0 1rem;
+            @extend %margenAuto;
+            margin-left: 1rem;
+            margin-right: 1rem;
             padding: 0.8rem;
-            color: $bordo;
+            color: $rosaOscuro;
+            transition: 3s;
+            &:hover{
+                transform: scale(1,1);
+                color: $negro;
+            }
         }
+        
         .active{ 
             color: $grisClaro;
             background-color: $rosaOscuro;
             letter-spacing: 1.3rem;
-        }
+            transition: 3s;
+            &:hover{
+                transform: scale(1,1);
+                color: $lila;
+            }
+        }      
+        
     }
     .barraNav__logo{
         width:  30%;
         max-width: 15rem;
         min-width:  12rem;
-        margin: 0 auto;
         align-self: center;
         justify-self: center;
+        @extend %margenAuto;
         &-imagen, &-titulo{
-            width:100%;
-            height: auto;
+            @include responsive-size;
             padding: 0.2rem;
             @media screen and (max-width: 992px) {
                 max-width: 13rem;}
@@ -121,7 +140,7 @@ main {
                 max-width: 9rem;}   
         }
 }
-}
+}                        
                             /*FOOTER*/
 .footerContainer{
     margin-bottom: 2rem;
@@ -131,8 +150,9 @@ main {
     flex-direction: row;
     justify-content: center;
     align-content: space-around;
+    @extend %margenAuto;
 
-    .footerContainer__nav-imagen{
+    &-imagen{
         margin: 1rem;
         align-self: center;
         justify-self: center;
@@ -151,25 +171,27 @@ main {
         }
 }
     &__linkArriba{
+    @extend %margenAuto;
     margin-bottom: 2rem;
     display: block;
     text-align: center;
     text-decoration: none;
     color: $rosa;
     transition: 2s;
+    &:hover{
+        color: $bordo;
+        text-decoration: none;
+        transform: scale (all);
+        font-size: 2.2rem;
     }
-        &__linkArriba:hover{
-            color: $bordo;
-            text-decoration: none;
-            transform: scale (all);
-            font-size: 2.2rem;
-        }
+    }
+        
 }
                         /*INDEX*/
 
 .wrapper{
+    @extend %margenAuto;
     text-align: center;
-    margin: auto;
 	display: flex;
 	width: 98%;
     gap: 1rem;
@@ -209,13 +231,13 @@ main {
 		top: 0;
 		left: 0;
 		display: block;
-		width: 100%;
-		height: 100%;
 		border-radius: 15px;
 		background: rgba($negro, 0.6);
 		z-index: 2;
 		transition: 0.5s;
-		opacity: 0;}
+		opacity: 0;
+        width: 100%;
+		height: 100%;}
 	img{
 		width: 100%;
 		height: 100%;
@@ -226,7 +248,7 @@ main {
 		border-radius: 15px;}
 
 	.info{
-        margin: auto;
+        @extend %margenAuto;
 		position: relative;
 		z-index: 3;
 		color: $grisClaro;
@@ -278,10 +300,10 @@ main {
 table {
     width: 80%;
     color: $rosa;
-    background-color: rgba($blanco,0.7);
     border-style: hidden;
     padding: 2rem;
-    margin: auto;
+    @extend %margenAuto;
+    @include fondoBlanco;
     b{
         color: $rosaOscuro;
     }
@@ -289,6 +311,7 @@ table {
         color: $bordo;
         text-decoration: underline;
         text-decoration-thickness: 0.1rem;
+        @extend %margenAuto;
         margin-top: 3rem;
         margin-bottom: 0px;
     }
@@ -303,7 +326,8 @@ table {
     text-align: center;
     font-size: 2.1rem;
     color: $rosaOscuro;
-    margin: 1rem auto 0 auto;
+    margin-top: 1rem;
+    @extend %margenAuto;
     padding: 1rem;
     max-width: 70rem;
     a {
@@ -312,17 +336,18 @@ table {
     }
 }
                         /*GALERIA*/
-
+                      
     
 
                               /* Sobre Ella CSS  */
 .infoElla{
-    margin: 1rem auto;
+    @extend %margenAuto;
     width: 95%;
-    background-color: rgba($blanco, 0.7);
+    text-align: center;
+    @include fondoBlanco;
     p{
-        margin: 0;
-        width: 100%;
+        @include responsive-size;
+        @extend %margenAuto;
         color:$rosa;
         z-index:1;
         text-align: justify;
@@ -331,105 +356,85 @@ table {
         text-decoration: none;
         color: $rosaOscuro;
     }
-    .infoElla__textoInformativo{
+
+    &__imagen-scale{
+        @include responsive-size;
+        max-width: 29rem;
+        margin: 1rem auto;
+        padding: 1rem;
+        transition: 2s;
+        position: relative;
+        z-index: 1; 
+    &:hover{
+            transform: scale(2, 2);
+            z-index: 2;
+        }
+    @media screen and (max-width: 768px) {
+        max-width: 20rem;
+        padding: 1.8rem;
+        }
+        @media screen and (max-width: 576px) {
+        max-width: 18rem;
+        padding: 1.5rem;
+        }
+      }
+    &__textoInformativo{
         padding: 2rem auto;
-        margin: auto;
+        @extend %margenAuto;
         z-index: 0;
+        flex-wrap: wrap;
         @media screen and (max-width: 992px) {
             padding: 1.8rem;
             }
         @media screen and (max-width: 768px) {
             padding: 1.4rem;
             }
-        
-    &Centro{
-        padding: 1rem;
         }
-
-    &Final{
-        background-color: rgba($grisClaro,0.2);
-        margin: 1.5rem;
-    }
-    }
-
-  
-  &__imagen-scale{
-    width:100%;
-    height: auto;  
-    max-width: 29rem;
-    margin: 1rem auto;
-    padding: 1rem;
-    transition: 2s;
-    position: relative;
-    z-index: 2;
-    &:hover{
-        transform: scale(2, 2) ;
-    }
-@media screen and (max-width: 768px) {
-    max-width: 20rem;
-    padding: 1.8rem;
-    }
-    @media screen and (max-width: 576px) {
-    max-width: 18rem;
-    padding: 1.5rem;
-    }
-  }
-    
     .contenedor_txtImg{
-        
-        max-width: 120rem;
-        width: 92%;
-           .infoElla__imagen{
-            
-            width: auto;
-            height: 100%;
-            min-width: 10rem;
-            max-width: 28rem;
-            transition: 2s;
-            z-index: 1;
-            @media screen and (max-width: 992px) {
-                margin: auto;
-                max-width: 25rem;
-                padding: 2rem;
-                }
-            @media screen and (max-width: 768px) {
-                margin: auto;
-                max-width: 20rem;
-                padding: 1.8rem;
-                }
-            @media screen and (max-width: 576px) {
-                margin: auto;
-                max-width: 15rem;
-                padding: 1.5rem;    
-            }
-                &:hover{
-                    transform: scale(2, 2);
-                    z-index:2;
-            }
+        width: 95%;
+        @extend %margenAuto;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(4,1fr);
 
+        .foto0{
+            grid-area: 1 / 1 / span 1 / span 4;
+            margin-bottom: 1rem;
         }
-        
-
+        .foto1{
+            grid-area: 2 / 1 / span 1 / span 1;}
+        .texto1{
+            grid-area: 2 / 2 / span 1 / span 3;}
+        .texto2{
+            grid-area: 3 / 1 / span 1 / span 3;}
+        .foto2{
+            grid-area: 3 / 4 / span 1 / span 1;}
+        .foto3{
+            grid-area: 4 / 1 / span 1 / span 1;}
+        .texto3{
+            grid-area: 4 / 2 / span 1 / span 3;}
+        .texto4{
+            grid-area: 5 / 1 / span 1 / span 3;}
+        .foto4{
+            grid-area: 5 / 4 / span 1 / span 1;}
+        .texto5{
+            grid-area: 6 / 1 / span 1 / span 4;}
     }
-}
-
-
+}                                         
                               /* Contacto CSS  */
 .mainContacto{
-    margin: auto;
+    @extend %margenAuto;
     width: 90%;
     
     .ContactoPadre__contenedor{
         text-align: center;
         padding: 2rem;
-        margin: auto;
-        background-color: rgba($blanco, 0.7);
-        background-size: width(70rem);
+        @extend %margenAuto;
+        @include fondoBlanco;
 
         &-texto{
-            margin: 0;
-            width: 100%;
-            color:$rosa;          
+            color:$rosa;
+            @include responsive-size;        
         }
         a, b{
             text-decoration: none;
@@ -442,7 +447,7 @@ table {
 
         table{
             padding: 2rem auto;
-            margin: auto;
+            @extend %margenAuto;
             td{
                 color: $rosa;
             }
