@@ -1,146 +1,156 @@
-                        /* var COLORES */
-$rosa: #F2059F;
-$rosaOscuro: #BF047E;
-$bordo: #A6036D;
-$lila: #D99AC3;
-$grisClaro: #D7D7D9;
+/* var COLORES */
+$rosa: #e92aa6;
+$rosaOscuro: #bf047e;
+$bordo: #a6036d;
+$lila: #d99ac3;
+$grisClaro: #d7d7d9;
 $negro: #000000;
 $blanco: white;
 
-                        /* mixin y placeholder*/
+/* mixin y placeholder*/
 @mixin responsive-size {
-width: 100%;
-height: auto;
-}            
+  width: 100%;
+  height: auto;
+}
 @mixin fondoBlanco {
-background-color: rgba($blanco, 0.7);
+  background-color: rgba($blanco, 0.7);
 }
-%margenAuto{
-    margin-left: auto;
-    margin-right: auto;
+@mixin flex-start {
+  align-self: flex-start;
 }
-                        /*CONFIG GRALES*/
-html{
-    font-size: 10px;
-  }
+%margenAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-body { 
-    background-image: url(../images/fondoBody_floral.jpg);
-    width: 98%;
-    height: auto;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Josefin Sans', sans-serif ;
-    font-size: 2rem;
-    
-    @extend %margenAuto;
+/*CONFIG GRALES*/
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: url(../images/fondoBody_floral.jpg);
+  width: 98%;
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+
+  @extend %margenAuto;
 }
 @media screen and (max-width: 992px) {
-    html{
-        font-size: 9px;
-      }
-    .titulo{
-    font-size: 4.5rem;}
+  html {
+    font-size: 9px;
+  }
+  .titulo {
+    font-size: 4.5rem;
+  }
 }
 @media screen and (max-width: 768px) {
-    html{
-        font-size: 8px;
-      }
-    .titulo{
+  html {
+    font-size: 8px;
+  }
+  .titulo {
     font-size: 4rem;
-    }
-    }
+  }
+}
 @media screen and (max-width: 576px) {
-    html{
-        font-size: 7px;
-      }
-    .titulo{
+  html {
+    font-size: 7px;
+  }
+  .titulo {
     font-size: 3rem;
-    }
+  }
 }
 main {
-    @extend %margenAuto;
+  @extend %margenAuto;
 }
-.titulo{
-    font-family: 'Bodoni Moda', serif;
-    color: $rosaOscuro;
-    text-align: center;
-    font-size: 5rem;
-    @extend %margenAuto;
-}                                         
-                        /* NAV */
-.barraNav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: nowrap;
-    font-size: 1.5rem;
-    height: 20rem;
-    width: 98%;
-    margin-bottom: 2rem;
-    @extend %margenAuto;
+.titulo {
+  font-family: "Bodoni Moda", serif;
+  color: $rosaOscuro;
+  text-align: center;
+  font-size: 5rem;
+  @extend %margenAuto;
+}
+/* NAV */
+.barraNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 1.5rem;
+  height: 20rem;
+  width: 98%;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  @extend %margenAuto;
 
-    .barraNav__menu{
-        width: 70%;
-        align-self: center;
-        justify-content: flex-start;
-        .nav-items{
-            word-spacing: 0.5rem;
-            letter-spacing: 0.5rem;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-        .nav-link{ 
-            @extend %margenAuto;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            padding: 0.8rem;
-            color: $rosaOscuro;
-            transition: 3s;
-            &:hover{
-                transform: scale(1,1);
-                color: $negro;
-            }
-        }
-        
-        .active{ 
-            color: $grisClaro;
-            background-color: $rosaOscuro;
-            letter-spacing: 1.3rem;
-            transition: 3s;
-            &:hover{
-                transform: scale(1,1);
-                color: $lila;
-            }
-        }      
-        
+  &__menu {
+    width: 70%;
+    align-self: center;
+    justify-content: flex-start;
+    .nav-items {
+      @extend %margenAuto;
+      word-spacing: 0.5rem;
+      letter-spacing: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
-    .barraNav__logo{
-        width:  30%;
-        max-width: 15rem;
-        min-width:  12rem;
-        align-self: center;
-        justify-self: center;
-        @extend %margenAuto;
-        &-imagen, &-titulo{
-            @include responsive-size;
-            padding: 0.2rem;
-            @media screen and (max-width: 992px) {
-                max-width: 13rem;}
-            @media screen and (max-width: 768px) {
-                max-width: 11rem;}
-            @media screen and (max-width: 576px) {
-                max-width: 9rem;}   
-        }
+    .nav-link {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 0.8rem;
+      color: $rosaOscuro;
+      transition: 3s;
+      &:hover {
+        transform: scale(1, 1);
+        color: $negro;
+      }
+    }
+
+    .active {
+      color: $grisClaro;
+      background-color: $rosaOscuro;
+      letter-spacing: 1.3rem;
+      transition: 3s;
+      &:hover {
+        transform: scale(1, 1);
+        color: $lila;
+      }
+    }
+  }
+  &__logo {
+    width: 30%;
+    max-width: 15rem;
+    min-width: 12rem;
+    align-self: center;
+    justify-self: center;
+    @extend %margenAuto;
+    &-imagen,
+    &-titulo {
+      @include responsive-size;
+      padding: 0.2rem;
+      @media screen and (max-width: 992px) {
+        max-width: 13rem;
+      }
+      @media screen and (max-width: 768px) {
+        max-width: 11rem;
+      }
+      @media screen and (max-width: 576px) {
+        max-width: 9rem;
+      }
+    }
+  }
 }
-}                        
-                            /*FOOTER*/
-.footerContainer{
-    margin-bottom: 2rem;
-&__nav{
+/*FOOTER*/
+.footerContainer {
+  margin-bottom: 2rem;
+  &__nav {
     height: 10rem;
     display: flex;
     flex-direction: row;
@@ -148,25 +158,28 @@ main {
     align-content: space-evenly;
     @extend %margenAuto;
 
-    &-imagen{
-        margin: 5rem 1rem 0.5rem 1rem;
-        align-self: center;
-        justify-self: center;
-        width: 4rem;
-        height: auto;
-        transition: 2s;
-        &:hover{
-            transform: scale(1.2, 1.2) ;
-        }
-        @media screen and (max-width: 992px) {
-            max-width: 3.5rem;}
-        @media screen and (max-width: 768px) {
-            max-width: 3rem;}
-        @media screen and (max-width: 576px) {
-            max-width: 2.8rem;}   
+    &-imagen {
+      margin: 5rem 1rem 0.5rem 1rem;
+      align-self: center;
+      justify-self: center;
+      width: 4rem;
+      height: auto;
+      transition: 2s;
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+      @media screen and (max-width: 992px) {
+        max-width: 3.5rem;
+      }
+      @media screen and (max-width: 768px) {
+        max-width: 3rem;
+      }
+      @media screen and (max-width: 576px) {
+        max-width: 2.8rem;
+      }
     }
-}
-    &__linkArriba{
+  }
+  &__linkArriba {
     @extend %margenAuto;
     margin-bottom: 2rem;
     display: block;
@@ -174,369 +187,397 @@ main {
     text-decoration: none;
     color: $rosa;
     transition: 2s;
-    &:hover{
-        color: $bordo;
-        text-decoration: none;
-        transform: scale (all);
-        font-size: 2.2rem;
+    &:hover {
+      color: $bordo;
+      text-decoration: none;
+      transform: scale (all);
+      font-size: 2.2rem;
     }
-    }
-    .poweredBy{
-        @extend %margenAuto;
-        @include responsive-size;
-        @include fondoBlanco;
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        color: $lila;
-        a{
-            text-decoration: none;
-            color: $lila;
-        }
-        &__logo{
-        width: 2rem;
-        height: auto;
-        min-width: 0.5rem;
-        transition: 2s;
-            &:hover{
-            transform: scale(1.2, 1.2);
-            }
-        }
-        &__txt{
-        font-size: 1.6rem;
-        }
-    }
-    .textoAtribucion{
-        @extend %margenAuto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-        text-align: center;
-        color: $lila;
-        a{
-            text-decoration: none;
-            color: $lila;
-            &:hover{
-                color: $rosa;
-            }
-        }
-    }
-        
-}
-                        /*INDEX*/
-
-.wrapper{
+  }
+  .poweredBy {
     @extend %margenAuto;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    @include responsive-size;
+    @include fondoBlanco;
     text-align: center;
-	display: flex;
-	width: 98%;
-    gap: 1rem;
-	justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $lila;
+    a {
+      text-decoration: none;
+      color: $lila;
+    }
+    &__logo {
+      width: 2rem;
+      height: auto;
+      min-width: 0.5rem;
+      transition: 2s;
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+    &__txt {
+      font-size: 1.6rem;
+    }
+  }
+  .textoAtribucion {
+    @extend %margenAuto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: $lila;
+    a {
+      text-decoration: none;
+      color: $lila;
+      &:hover {
+        color: $rosa;
+      }
+    }
+  }
+}
+/*INDEX*/
+
+.wrapper {
+  @extend %margenAuto;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  display: flex;
+  width: 98%;
+  gap: 1rem;
+  justify-content: space-evenly;
 }
 
-.card{
+.card {
+  width: 100%;
+  max-width: 28rem;
+  height: 36rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background: $blanco;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0 0.7rem 0.5rem rgba($rosaOscuro, 0.4);
+
+  @media screen and (max-width: 992px) {
+    margin: 2rem;
+    padding: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 1.5rem;
+    padding: 1rem;
+  }
+
+  &:hover {
+    transform: translateY(20px);
+    &:before {
+      opacity: 1;
+    }
+    .info {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 15px;
+    background: rgba($negro, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
     width: 100%;
-	max-width: 28rem;
-	height: 36rem;
-	border-radius: 1.5rem;
-	padding: 1.5rem;
-	background: $blanco;
-	position: relative;
-	display: flex;
-	align-items: flex-end;
-	transition: 0.4s ease-out;
-	box-shadow: 0 0.7rem 0.5rem rgba($rosaOscuro, 0.4);
-    
-    @media screen and (max-width: 992px) {
-        margin: 2rem;
-        padding: 1rem;}
-    @media screen and (max-width: 768px) {
-        margin: 1.5rem;
-        padding: 1rem;}
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+  }
 
-	&:hover{
-		transform: translateY(20px);
-		&:before{
-			opacity: 1;}
-		.info{
-			opacity: 1;
-			transform: translateY(0px);}}
-	&:before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		border-radius: 15px;
-		background: rgba($negro, 0.6);
-		z-index: 2;
-		transition: 0.5s;
-		opacity: 0;
-        width: 100%;
-		height: 100%;}
-	img{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
-		border-radius: 15px;}
+  .info {
+    @extend %margenAuto;
+    position: relative;
+    z-index: 3;
+    color: $grisClaro;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+    p {
+      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
 
-	.info{
-        @extend %margenAuto;
-		position: relative;
-		z-index: 3;
-		color: $grisClaro;
-		opacity: 0;
-		transform: translateY(30px);
-		transition: 0.5s;
-		p{
-			letter-spacing: 0.1rem;
-			font-size: 1.5rem;
-            
-			margin-top: 0.8rem;}
-		button{
-            padding: 0.6rem;
-			outline: none;
-			border: none;
-			border-radius: 0.3rem;
-			background: $lila;
-			color: $rosaOscuro;
-			font-weight: bold;
-			cursor: pointer;
-			transition: 0.4s ease;
-            a{
-                color: $grisClaro;
-                text-decoration: none;
-                &:hover{
-                    color: $bordo;}
-                }
-            }
-            @media screen and (max-width: 992px) {
-                p{
-                    letter-spacing: 0.1rem;
-                    font-size: 1.2rem;
-                    margin-top: 0.6rem;
-                }
-            }
-            @media screen and (max-width: 768px) {
-                p{
-                    letter-spacing: 0.1rem;
-                    font-size: 1rem;
-                    margin-top: 0.4rem;
-                }
-            }
-
+      margin-top: 0.8rem;
+    }
+    button {
+      padding: 0.6rem;
+      outline: none;
+      border: none;
+      border-radius: 0.3rem;
+      background: $lila;
+      color: $rosaOscuro;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.4s ease;
+      a {
+        color: $grisClaro;
+        text-decoration: none;
+        &:hover {
+          color: $bordo;
         }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      p {
+        letter-spacing: 0.1rem;
+        font-size: 1.2rem;
+        margin-top: 0.6rem;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      p {
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+        margin-top: 0.4rem;
+      }
+    }
+  }
 }
 
-                        /*SERVICIOS*/
+/*SERVICIOS*/
 
 table {
-    width: 80%;
-    color: $rosa;
-    border-style: hidden;
-    padding: 2rem;
+  width: 80%;
+  color: $rosa;
+  border-style: hidden;
+  padding: 2rem;
+  @extend %margenAuto;
+  @include fondoBlanco;
+  b {
+    color: $rosaOscuro;
+  }
+  h1 {
+    color: $bordo;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
     @extend %margenAuto;
-    @include fondoBlanco;
-    b{
-        color: $rosaOscuro;
-    }
-    h1{
-        color: $bordo;
-        text-decoration: underline;
-        text-decoration-thickness: 0.1rem;
-        @extend %margenAuto;
-        margin-top: 3rem;
-        margin-bottom: 0px;
-    }
- 
-  .itemsTabla{
+    margin-top: 3rem;
+    margin-bottom: 0px;
+  }
+
+  .itemsTabla {
     border: hidden;
     text-align: center;
   }
 }
 
 .textoComplementario {
-    text-align: center;
-    font-size: 2.1rem;
-    color: $rosaOscuro;
-    margin-top: 1rem;
-    @extend %margenAuto;
-    padding: 1rem;
-    max-width: 70rem;
-    a {
-        text-decoration: none;
-        color: $bordo;
-    }
+  text-align: center;
+  font-size: 2.1rem;
+  color: $rosaOscuro;
+  margin-top: 1rem;
+  @extend %margenAuto;
+  padding: 1rem;
+  max-width: 70rem;
+  a {
+    text-decoration: none;
+    color: $bordo;
+  }
 }
-                        /*GALERIA*/
-.carousel{
-    width: 60%;
+/*GALERIA*/
+.carousel {
+  width: 60%;
+  @extend %margenAuto;
+  @include fondoBlanco;
+  @media screen and (max-width: 992px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 576px) {
+    width: 40%;
+  }
+
+  &-inner {
+    width: 50rem;
     @extend %margenAuto;
-    @include fondoBlanco;
-    @media screen and (max-width: 992px) {
-        width: 50%;}
-    @media screen and (max-width: 768px) {
-        width: 45%;}
-    @media screen and (max-width: 576px) {
-        width: 40%;}   
+  }
+  &-item {
+    img {
+      @include responsive-size;
+    }
+  }
 
-    &-inner {
-        width: 50rem;
-        @extend %margenAuto;
+  &-control-prev {
+    color: rgba($rosa, 0.6);
+    transition: 2s;
+    &:hover {
+      color: rgba($rosa, 0.9);
+      transform: scale(1.3, 1.3);
     }
-    &-item{
-        img{
-            @include responsive-size;
-        }
+  }
+  &-control-next {
+    color: rgba($rosa, 0.6);
+    transition: 2s;
+    &:hover {
+      color: rgba($rosa, 0.9);
+      transform: scale(1.3, 1.3);
     }
-
-    &-control-prev{
-        color: rgba($rosa, 0.6);
-        transition: 2s;
-        &:hover{
-            color: rgba($rosa, 0.9);
-            transform: scale(1.3, 1.3);
-        }
-    }
-    &-control-next{
-        color: rgba($rosa, 0.6);
-        transition: 2s;
-        &:hover{
-            color: rgba($rosa, 0.9);
-            transform: scale(1.3, 1.3);
-        }
-    }
+  }
 }
 
-                              /* Sobre Ella CSS  */
-.infoElla{
-    @extend %margenAuto;
+/* Sobre Ella CSS  */
+.infoElla {
+  @extend %margenAuto;
+  width: 95%;
+  text-align: center;
+  @include fondoBlanco;
+  .contenedor_txtImg {
     width: 95%;
-    text-align: center;
-    @include fondoBlanco;
-    p{
-        display: inline;
-        @include responsive-size;
-        @extend %margenAuto;
-        color:$rosa;
-        z-index:1;
-        text-align: justify;
-    }
-    a, b, em {
-        text-decoration: none;
-        color: $rosaOscuro;
-    }
-
-    &__imagen-scale{
-        @include responsive-size;
-        max-width: 29rem;
-        margin: 1rem auto;
-        padding: 1rem;
-        transition: 2s;
-        position: relative;
-        z-index: 1; 
-    &:hover{
-            transform: scale(2, 2);
-            z-index: 2;
-        }
-    @media screen and (max-width: 768px) {
-        max-width: 20rem;
-        padding: 1.8rem;
-        }
-        @media screen and (max-width: 576px) {
-        max-width: 18rem;
-        padding: 1.5rem;
-        }
-      }
-    &__textoInformativo{
-        padding: 2rem auto;
-        @extend %margenAuto;
-        z-index: 0;
-        flex-wrap: wrap;
-        @media screen and (max-width: 992px) {
-            padding: 1.8rem;
-            }
-        @media screen and (max-width: 768px) {
-            padding: 1.4rem;
-            }
-        }
-    .contenedor_txtImg{
-        width: 95%;
-        @extend %margenAuto;
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(4,1fr);
-
-        .foto0{
-            grid-area: 1 / 1 / span 1 / span 4;
-            margin-bottom: 1rem;
-        }
-        .foto1{
-            grid-area: 2 / 1 / span 1 / span 1;
-            transition: 2s;
-            }
-        .texto1{
-            grid-area: 2 / 2 / span 1 / span 3;}
-        .texto2{
-            grid-area: 3 / 1 / span 1 / span 3;}
-        .foto2{
-            grid-area: 3 / 4 / span 1 / span 1;}
-        .foto3{
-            grid-area: 4 / 1 / span 1 / span 1;}
-        .texto3{
-            grid-area: 4 / 2 / span 1 / span 3;}
-        .texto4{
-            grid-area: 5 / 1 / span 1 / span 3;}
-        .foto4{
-            grid-area: 5 / 4 / span 1 / span 1;}
-        .texto5{
-            grid-area: 6 / 1 / span 1 / span 4;
-            }
-        }
-    }                                      
-                              /* Contacto CSS  */
-.mainContacto{
     @extend %margenAuto;
-    width: 90%;
-    
-    .ContactoPadre__contenedor{
-        text-align: center;
-        padding: 2rem;
-        @extend %margenAuto;
-        @include fondoBlanco;
-
-        &-texto{
-            color:$rosa;
-            @include responsive-size;        
-        }
-        a, b{
-            text-decoration: none;
-            color: $rosaOscuro;
-        }
-        h1,h2{
-        color: $bordo;
-        }
-
-
-        table{
-            padding: 2rem auto;
-            @extend %margenAuto;
-            td{
-                color: $rosa;
-            }
-            @media screen and (max-width: 992px) {
-                padding: 1.8rem;
-                }
-            @media screen and (max-width: 768px) {
-                padding: 1.4rem;
-                }
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    p {
+      @include responsive-size;
+      @extend %margenAuto;
+      color: $rosa;
+      z-index: 1;
+      text-align: justify;
     }
+    a,
+    b,
+    em {
+      text-decoration: none;
+      color: $rosaOscuro;
     }
 
+    .foto0 {
+      grid-area: 1 / 1 / span 1 / span 4;
+      margin-bottom: 1rem;
+    }
+    .foto1 {
+      grid-area: 2 / 1 / span 1 / span 1;
+      @include flex-start;
+    }
+    .texto1 {
+      grid-area: 2 / 2 / span 1 / span 3;
+    }
+    .texto2 {
+      grid-area: 3 / 1 / span 1 / span 3;
+    }
+    .foto2 {
+      grid-area: 3 / 4 / span 1 / span 1;
+      @include flex-start;
+    }
+    .foto3 {
+      grid-area: 4 / 1 / span 1 / span 1;
+      @include flex-start;
+    }
+    .texto3 {
+      grid-area: 4 / 2 / span 1 / span 3;
+    }
+    .texto4 {
+      grid-area: 5 / 1 / span 1 / span 3;
+    }
+    .foto4 {
+      grid-area: 5 / 4 / span 1 / span 1;
+      @include flex-start;
+    }
+    .texto5 {
+      grid-area: 6 / 1 / span 1 / span 4;
+    }
+  }
 
+  &__imagen-scale {
+    @include responsive-size;
+    max-width: 29rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    transition: 2s;
+    position: relative;
+    z-index: 1;
+    .infoElla__imagen-scale-izq {
+      float: left;
+    }
+    .infoElla__imagen-scale-der {
+      float: right;
+    }
+    &:hover {
+      transform: scale(2, 2);
+      z-index: 2;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 20rem;
+      margin-left: 1rem;
+      padding: 1rem;
+    }
+    @media screen and (max-width: 576px) {
+      max-width: 18rem;
+      margin-left: 1rem;
+      padding: 0.8rem;
+    }
+  }
+  &__textoInformativo {
+    padding: 2rem auto;
+    @extend %margenAuto;
+    z-index: 0;
+    flex-wrap: wrap;
+    @media screen and (max-width: 992px) {
+      padding: 1.8rem;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 1.4rem;
+    }
+  }
+}
+/* Contacto CSS  */
+.mainContacto {
+  @extend %margenAuto;
+  width: 90%;
+
+  .ContactoPadre__contenedor {
+    text-align: center;
+    padding: 2rem;
+    @extend %margenAuto;
+    @include fondoBlanco;
+
+    &-texto {
+      color: $rosa;
+      @include responsive-size;
+    }
+    a,
+    b {
+      text-decoration: none;
+      color: $rosaOscuro;
+    }
+    h1,
+    h2 {
+      color: $bordo;
+    }
+
+    table {
+      padding: 2rem auto;
+      @extend %margenAuto;
+      td {
+        color: $rosa;
+      }
+      @media screen and (max-width: 992px) {
+        padding: 1.8rem;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 1.4rem;
+      }
+    }
+  }
 }
