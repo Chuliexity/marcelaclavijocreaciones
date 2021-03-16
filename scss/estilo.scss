@@ -70,10 +70,7 @@ main {
         .titulo{
         font-size: 2rem;
         }
-}                        
-
-
-
+}                      
                         /* NAV */
 .barraNav{
     display: flex;
@@ -185,12 +182,54 @@ main {
         font-size: 2.2rem;
     }
     }
+    .poweredBy{
+        @extend %margenAuto;
+        @include responsive-size;
+        @include fondoBlanco;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: $lila;
+        a{
+            text-decoration: none;
+            color: $lila;
+        }
+        &__logo{
+        width: 2rem;
+        height: auto;
+        min-width: 0.5rem;
+        transition: 2s;
+            &:hover{
+            transform: scale(1.2, 1.2);
+            }
+        }
+        &__txt{
+        font-size: 1.6rem;
+        }
+    }
+    .textoAtribucion{
+        @extend %margenAuto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        text-align: center;
+        color: $lila;
+        a{
+            text-decoration: none;
+            color: $lila;
+            &:hover{
+                color: $rosa;
+            }
+        }
+    }
         
 }
                         /*INDEX*/
 
 .wrapper{
     @extend %margenAuto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
     text-align: center;
 	display: flex;
 	width: 98%;
@@ -336,8 +375,37 @@ table {
     }
 }
                         /*GALERIA*/
-                      
-    
+.carousel{
+    width: 80rem;
+    @extend %margenAuto;
+    @include fondoBlanco;
+    &-inner {
+        width: 50rem;
+        @extend %margenAuto;
+    }
+    &-item{
+        img{
+            @include responsive-size;
+        }
+    }
+
+    &-control-prev{
+        color: rgba($rosa, 0.6);
+        transition: 2s;
+        &:hover{
+            color: rgba($rosa, 0.9);
+            transform: scale(2, 2);
+        }
+    }
+    &-control-next{
+        color: rgba($rosa, 0.6);
+        transition: 2s;
+        &:hover{
+            color: rgba($rosa, 0.9);
+            transform: scale(2, 2);
+        }
+    }
+}
 
                               /* Sobre Ella CSS  */
 .infoElla{
@@ -346,6 +414,7 @@ table {
     text-align: center;
     @include fondoBlanco;
     p{
+        display: inline;
         @include responsive-size;
         @extend %margenAuto;
         color:$rosa;
@@ -402,7 +471,9 @@ table {
             margin-bottom: 1rem;
         }
         .foto1{
-            grid-area: 2 / 1 / span 1 / span 1;}
+            grid-area: 2 / 1 / span 1 / span 1;
+            transition: 2s;
+            }
         .texto1{
             grid-area: 2 / 2 / span 1 / span 3;}
         .texto2{
@@ -418,9 +489,10 @@ table {
         .foto4{
             grid-area: 5 / 4 / span 1 / span 1;}
         .texto5{
-            grid-area: 6 / 1 / span 1 / span 4;}
-    }
-}                                         
+            grid-area: 6 / 1 / span 1 / span 4;
+            }
+        }
+    }                                      
                               /* Contacto CSS  */
 .mainContacto{
     @extend %margenAuto;
