@@ -409,6 +409,15 @@ table {
   width: 60%;
   @extend %margenAuto;
   background-color: rgba($grisClaro, 0.6);
+  @media screen and (max-width: 992px) {
+    min-width: 70rem;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 65rem;
+  }
+  @media screen and (max-width: 576px) {
+    min-width: 60rem;
+  }
 
   &-inner {
     width: 65%;

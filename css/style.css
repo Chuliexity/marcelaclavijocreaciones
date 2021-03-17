@@ -312,6 +312,15 @@ table {
 .carousel {
   width: 60%;
   background-color: rgba(215, 215, 217, 0.6); }
+  @media screen and (max-width: 992px) {
+    .carousel {
+      min-width: 70rem; } }
+  @media screen and (max-width: 768px) {
+    .carousel {
+      min-width: 65rem; } }
+  @media screen and (max-width: 576px) {
+    .carousel {
+      min-width: 60rem; } }
   .carousel-inner {
     width: 65%; }
   .carousel-item img {
