@@ -320,7 +320,7 @@ table {
       min-width: 65rem; } }
   @media screen and (max-width: 576px) {
     .carousel {
-      min-width: 60rem; } }
+      min-width: 50rem; } }
   .carousel-inner {
     width: 65%; }
   .carousel-item img {
