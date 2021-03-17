@@ -37,33 +37,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 2rem;
-
+  font-size: 1.8rem;
   @extend %margenAuto;
-}
-@media screen and (max-width: 992px) {
-  html {
-    font-size: 9px;
-  }
-  .titulo {
-    font-size: 4.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 8px;
-  }
-  .titulo {
-    font-size: 4rem;
-  }
-}
-@media screen and (max-width: 576px) {
-  html {
-    font-size: 7px;
-  }
-  .titulo {
-    font-size: 3rem;
-  }
 }
 main {
   @extend %margenAuto;
@@ -75,6 +50,43 @@ main {
   font-size: 5rem;
   @extend %margenAuto;
 }
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+  .titulo {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  .titulo {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 7px;
+  }
+  .titulo {
+    font-size: 2.5rem;
+  }
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px $rosaOscuro(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $lila;
+  outline: 1px solid $bordo;
+}
+
 /* NAV */
 .barraNav {
   display: flex;
@@ -180,6 +192,7 @@ main {
   }
   &__linkArriba {
     @extend %margenAuto;
+    width: 20%;
     margin-bottom: 2rem;
     display: block;
     text-align: center;
@@ -187,10 +200,9 @@ main {
     color: $rosa;
     transition: 2s;
     &:hover {
+      transform: scale(1.2, 1.2);
       color: $bordo;
       text-decoration: none;
-      transform: scale (all);
-      font-size: 2.2rem;
     }
   }
   .poweredBy {
@@ -399,7 +411,7 @@ table {
   background-color: rgba($grisClaro, 0.6);
 
   &-inner {
-    width: 70%;
+    width: 65%;
     @extend %margenAuto;
   }
   &-item {
@@ -452,6 +464,7 @@ table {
 
     .foto0 {
       grid-area: 1 / 1 / span 1 / span 4;
+      @extend %margenAuto;
       margin-bottom: 1rem;
     }
     .foto1 {
