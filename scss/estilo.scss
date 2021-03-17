@@ -112,9 +112,8 @@ main {
         color: $negro;
       }
     }
-
     .active {
-      color: $grisClaro;
+      color: $negro;
       background-color: $rosaOscuro;
       letter-spacing: 1.3rem;
       transition: 3s;
@@ -397,40 +396,29 @@ table {
 .carousel {
   width: 60%;
   @extend %margenAuto;
-  @include fondoBlanco;
-  @media screen and (max-width: 992px) {
-    width: 50%;
-  }
-  @media screen and (max-width: 768px) {
-    width: 45%;
-  }
-  @media screen and (max-width: 576px) {
-    width: 40%;
-  }
+  background-color: rgba($grisClaro, 0.6);
 
   &-inner {
-    width: 50rem;
+    width: 70%;
     @extend %margenAuto;
   }
   &-item {
     img {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       @include responsive-size;
     }
   }
 
-  &-control-prev {
-    color: rgba($rosa, 0.6);
+  .carousel-control-next-icon {
     transition: 2s;
     &:hover {
-      color: rgba($rosa, 0.9);
       transform: scale(1.3, 1.3);
     }
   }
-  &-control-next {
-    color: rgba($rosa, 0.6);
+  .carousel-control-next-icon {
     transition: 2s;
     &:hover {
-      color: rgba($rosa, 0.9);
       transform: scale(1.3, 1.3);
     }
   }
